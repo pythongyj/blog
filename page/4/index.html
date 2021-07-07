@@ -1,0 +1,451 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>长情 - 梦幻人生</title><meta name="keywords" content="html,css,js,node,vue,react,dart,flutter"><meta name="author" content="Yunjie Ge,1329712473@qq.com"><meta name="copyright" content="Yunjie Ge"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="你相信什么，你就看到什么">
+<meta property="og:type" content="website">
+<meta property="og:title" content="长情">
+<meta property="og:url" content="http://www.cq.qcwy.org.cn/page/4/index.html">
+<meta property="og:site_name" content="长情">
+<meta property="og:description" content="你相信什么，你就看到什么">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg">
+<meta property="article:author" content="Yunjie Ge">
+<meta property="article:tag" content="html,css,js,node,vue,react,dart,flutter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg"><link rel="shortcut icon" href="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg"><link rel="canonical" href="http://www.cq.qcwy.org.cn/page/4/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/image/pwa/apple-touch-icon.png"/><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Yunjie Ge","link":"链接: ","source":"来源: 长情","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: {"text":"I,LOVE,YOU","fontSize":"15px"},
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-07-07 11:06:21'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><style type="text/css">#toggle-sidebar {bottom: 80px}#toggle-sidebar {left:100px}</style><meta name="generator" content="Hexo 5.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">69</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">36</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">75</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 音视频</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 优秀资源</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://www.css.case.qcwy.org.cn/"><span> CSS Demo</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#"><span> ES6</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.ui.qcwy.org.cn/"><span> UI设计</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.big.school.qcwy.org.cn/"><span> Big School</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(http://www.blog.image.qcwy.org.cn/bg/tangyan/222.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">长情</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 音视频</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 优秀资源</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://www.css.case.qcwy.org.cn/"><span> CSS Demo</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#"><span> ES6</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.ui.qcwy.org.cn/"><span> UI设计</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.big.school.qcwy.org.cn/"><span> Big School</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">长情</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/08/05/flutter/ambient/" title="Flutter Mac环境配置 创建项目">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/article/flutter/ambient/7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Flutter Mac环境配置 创建项目"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/05/flutter/ambient/" title="Flutter Mac环境配置 创建项目">Flutter Mac环境配置 创建项目</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-08-05T01:14:58.000Z" title="发表于 2020-08-05 09:14:58">2020-08-05</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-08-05T01:14:58.000Z" title="更新于 2020-08-05 09:14:58">2020-08-05</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/flutter/">flutter</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/flutter/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">环境搭建</a></span></div><div class="content">1、目标
+最近开始学习 flutter 开发 app 了, 然而学习之前要安装搭建开发环境。
+
+2、安装
+官网https://flutterchina.club/setup-macos/首先先下载 flutter 包，下载开发工具等等。其次就是配置环境，因为 flutter 并不像 node.js 那样，安装上就直接配置到环境变量了。flutter 需要自己去配置。具体到配置，可以看上面到官网。这里只记录自己开配置过程中遇到到一些问题，记录一下。
+
+3、配置环境变量
+1、在下载好 flutter 包以后，进行解压，然后把解压后到文件放在你想要按装的位置2、使用 linux 的编辑器工具 vim
+
+1vim ~/.bash_profile  //使用vim编辑器编写.bash_profile
+
+
+3、在打开 vim 编辑器后，按i进入编辑模式，输入
+
+1export PATH=/你的flutter文件夹所在位置/flutter/bin:$PATH
+
+
+4、输入完成后按esc进行退出，输入** ：wq进行保存退出。这个时候你可能会遇到一个错误（没有截图），就是说文件只读，这时强制保存退出就 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/27/sjjgysf/sjjgysf-figure/" title="数据结构与算法之图形结构">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/26.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构与算法之图形结构"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/27/sjjgysf/sjjgysf-figure/" title="数据结构与算法之图形结构">数据结构与算法之图形结构</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-27T13:34:37.000Z" title="发表于 2020-07-27 21:34:37">2020-07-27</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-07-27T13:34:37.000Z" title="更新于 2020-07-27 21:34:37">2020-07-27</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%9B%BE%E5%BD%A2%E7%BB%93%E6%9E%84/">图形结构</a></span></div><div class="content">图的概念
+图结构中，一个结点可以链接到任意结点，所有结点链接而成的结构，即为图结构
+图结构中的链接可以是有向的，也可以是无向的（双向链接），本文仅讨论双向链接
+树结构是一种特殊的图结构
+图结构没有根，可以有环，但是在一个图结构中，不能存在两个或以上的孤立结点
+可以使用图中任何一个结点表示整个图结构
+图结构是一种常见的数据结构，例如网络爬虫抓取的网页就是一种典型的图结构
+图结构的代码可表示为：
+1234function Node(value)&#123;    this.value = value;    this.neighbors = [];&#125;
+
+相关算法
+查询算法
+和树结构一样，图结构的查询也可以分为深度优先（Depth First Search）和广度优先(Breadth First Search)查询
+
+最小生成树算法
+如果一个图中结点连接而成的边具备某种数值，需要将这些边进行精简，生成一个连接全节点同时总边长最小的树结构，该树称之为最小生成树
+实现最小生成树可以使用Prim算法，从任意一个点出发，连接到该点最短的点，组成一个部落，然后继续连接到该部落最短的点，直到把 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/27/other/zsb-math-gs/" title="在职专升本高等数学公式">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/bg/tangyan/583535c99b00d.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在职专升本高等数学公式"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/27/other/zsb-math-gs/" title="在职专升本高等数学公式">在职专升本高等数学公式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-27T09:06:57.000Z" title="发表于 2020-07-27 17:06:57">2020-07-27</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-07-27T09:06:57.000Z" title="更新于 2020-07-27 17:06:57">2020-07-27</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E4%BB%96/">其他</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E4%BB%96/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/">高等数学</a></span></div><div class="content">1、前言
+本文所有内容均为图片，本文所有内容来自网络，本文所有内容只为方便本人学习使用。如若侵犯了您的版权，请联系我，本人会在第一时间删除本文章。如若对您造成了不便，敬请见谅。
+
+2、公式内容
+
+
+
+
+
+
+
+
+
+
+
+
+
+如果能够帮助到你，是小编最大的荣幸
+当然 有 不好的地方 请大家帮忙指出 学习永无止境
+小编一直认为 人外有人 天外有天 一起学习 共同进步
+让我们共同加油吧！！！
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/26/sjjgysf/sjjgysf-tree/" title="数据结构与算法之树形结构">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/31.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构与算法之树形结构"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/26/sjjgysf/sjjgysf-tree/" title="数据结构与算法之树形结构">数据结构与算法之树形结构</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-26T12:23:14.000Z" title="发表于 2020-07-26 20:23:14">2020-07-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-07-26T12:23:14.000Z" title="更新于 2020-07-26 20:23:14">2020-07-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%A0%91%E5%BD%A2%E7%BB%93%E6%9E%84/">树形结构</a></span></div><div class="content">树树是一个类似于链表的二维结构，每个节点可以指向0个或多个其他节点
+
+树具有以下特点：
+
+单根：如果一个节点A指向了另一个节点B，仅能通过A直接找到B节点，不可能通过其他节点直接找到B节点
+无环：节点的指向不能形成环
+
+树的术语：
+
+结点的度：某个节点的度 = 该节点子节点的数量
+树的度：一棵树中，最大的节点的度为该树的度
+结点的层：从根开始定义起，根为第1层，根的子结点为第2层，以此类推；
+树的高度或深度：树中结点的最大层次
+叶子节点：度为0的结点称为叶结点；
+分支节点：非叶子节点
+子节点、父节点：相对概念，如果A节点有一个子节点B，则A是B的父节点，B是A的子节点
+兄弟节点：如果两个节点有同一个父节点，则它们互为兄弟节点
+祖先节点：某个节点的祖先节点，是从树的根到该节点本身经过的所有节点
+后代节点：如果A是B的祖先节点，B则是A的后代节点
+
+树的代码表示法：
+1234function Node(value)&#123;    this.value = value;    this.children = [];&#125;
+
+二叉树如果一颗树的度为2，则该树是二叉树
+
+二叉树可以用下 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/25/sjjgysf/sjjgysf-sort/" title="数据结构与算法之排序和查找">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/30.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构与算法之排序和查找"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/25/sjjgysf/sjjgysf-sort/" title="数据结构与算法之排序和查找">数据结构与算法之排序和查找</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-25T14:34:18.000Z" title="发表于 2020-07-25 22:34:18">2020-07-25</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-07-25T14:34:18.000Z" title="更新于 2020-07-25 22:34:18">2020-07-25</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E5%92%8C%E6%9F%A5%E6%89%BE/">排序和查找</a></span></div><div class="content">排序算法
+选择排序 Selection Sort
+一次选择排序，可以将某个区间的最小值排列到该区域的第一位，具体过程是：
+
+
+冒泡排序 Bubble Sort
+一次冒泡排序，可以将某个区域序列的最大值排序到该区域的最后一位，具体过程是：
+
+
+快速排序 Quick Sort
+选择一个数（比如序列的最后一位）作为基准数，将整个序列排序成两部分，一部分比该数小，另一部分比该数大，基准数在中间，然后对剩余的序列做同样的事情，直到排序完成
+
+
+
+查询算法
+顺序查找 Inorder Search
+即普通的遍历，属于算法的穷举法，没啥好解释的
+
+二分查找 Binary Search
+如果一个序列是一个排序好的序列，则使用二分查找可以极大的缩短查找时间
+具体的做法是：
+查找该序列中间未知的数据
+
+相等，找到
+要找的数据较大，则对后续部分的数据做同样的步骤
+要找的数据较小，则对前面部分的数据做同样的步骤
+
+
+插值查找 Interpolation Search
+插值查找是对二分查找的进一步改进
+如果序列不仅是一个排序好的序列，而且序列的步长大致相同，使用插值查找会更快的找到目标。
+插值查找基于如下假设：下 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/24/sjjgysf/sjjgysf-line/" title="数据结构与算法之线性结构">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/28.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构与算法之线性结构"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/24/sjjgysf/sjjgysf-line/" title="数据结构与算法之线性结构">数据结构与算法之线性结构</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-24T15:59:15.000Z" title="发表于 2020-07-24 23:59:15">2020-07-24</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-07-24T15:59:15.000Z" title="更新于 2020-07-24 23:59:15">2020-07-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/">线性结构</a></span></div><div class="content">常见问题
+什么是数据结构？
+用于表示数据关系的结构
+常见的数据结构有：数组、链表、树、图等
+
+什么是算法？
+根据已知数据得到结果数据的计算方法
+常见的算法有：穷举法、分治法、贪心算法、动态规划
+
+数据结构和算法有什么关系？
+数据结构关心的是如何使用合适的结构存储数据
+算法关心的是计算过程
+有了相应的数据结构，免不了对这种数据结构的各种变化进行运算，所以，很多时候，某种数据结构都会自然而然的搭配不少算法。
+
+数据结构和算法课程使用什么计算机语言？
+数据结构和算法属于计算机基础课程，它们和具体的语言无关，用任何语言都可以实现。
+本课程采用JavaScript语言。
+
+
+递归知识回顾递归（recursion）是函数式编程思想的产物，它使用数学函数的思想进行运算，只要在数学逻辑上是合理的，即代码中的函数一定合理
+使用递归时，无须深究其运行过程！
+
+斐波拉契数列的特点是：第1位和第2位固定为1，后面的位，其数字等于前两位之和，比如：
+[1, 1, 2, 3, 5, 8, 13, 21, ……]
+求斐波拉契数列第n位的值，n&gt;0
+如果使用函数f(n)来表示斐波拉契数列第n位的值，通过数学分析 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/13/less/less-var/" title="less全局变量">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/16.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="less全局变量"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/13/less/less-var/" title="less全局变量">less全局变量</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-13T15:54:12.000Z" title="发表于 2020-07-13 23:54:12">2020-07-13</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-07-13T15:54:12.000Z" title="更新于 2020-07-13 23:54:12">2020-07-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/less/">less</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/less/%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/">全局变量</a></span></div><div class="content">1、前言
+记录每天学习的过程中遇到的一些问题和解决方案，如果哪里有不对的地方，还望指教。
+
+原创文章： 转载请注名出处，谢谢配合
+2、问题——less全局变量的使用2.1、全局less变量
+2.2、vue文件中使用全局的变量
+
+可以看到问题所在，提示我变量为定义。而我已经在全局定义过了，在main.js中引入了，但是没有起作用。
+
+3、解决问题——使用sass-resources-loader解决3.1、安装sass-resources-loader123npm install sass-resources-loader --save-devORyarn add sass-resources-loader --save-dev
+3.2、配置
+在根目录创建一个vue.config.js的文件
+
+12345678910111213const path = require(&quot;path&quot;);module.exports = &#123;  pluginOptions: &#123;    &quot;style-resources-loader&quot;: &#123;  ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/11/nuxt/nuxt-data-loss/" title="nuxt.js页面刷新数据丢失">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/19.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="nuxt.js页面刷新数据丢失"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/11/nuxt/nuxt-data-loss/" title="nuxt.js页面刷新数据丢失">nuxt.js页面刷新数据丢失</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-11T02:35:06.000Z" title="发表于 2020-07-11 10:35:06">2020-07-11</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-07-11T02:35:06.000Z" title="更新于 2020-07-11 10:35:06">2020-07-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/nuxt/">nuxt</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/nuxt/%E9%A1%B5%E9%9D%A2%E5%88%B7%E6%96%B0%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1/">页面刷新数据丢失</a></span></div><div class="content">1、前言
+记录每天学习的过程中遇到的一些问题和解决方案，如果哪里有不对的地方，还望指教。
+
+原创文章： 转载请注名出处，谢谢配合
+2、问题
+前几天搭建的项目，交给同事去做了。今天他过来问我，你看我页面好好的，跳转也正常，但是跳转过去后，刷新页面的时候，就报错了。页面数据丢失了。存到vuex里面的数据清空了，拿不到了。在asyncData里面也拿不到window等客户端对象，持久化存储等方式也没有办法拿到数据。这个我想了两天多了，不知道该如何解决。你帮我看下，看怎么做才能在页面刷新的时候拿到数据呢？
+
+这是今天公司的同事给我反应的问题。
+3、解决问题
+知道问题的原因，解决问题还不简单么？咱们先看看nuxt的文档看上面官网给的api可以看到，这个api可以获取到页面的上下文对象作为这个api的第二个参数传递给它。
+
+
+因此，我们就可以在服务端拿到客户端请求的url了。
+
+12345678actions: &#123;      nuxtServerInit(&#123; commit &#125;, &#123; req &#125;) &#123;        console.log( ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/09/nuxt/nuxt-proxy/" title="nuxt-proxy 代理">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/21.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="nuxt-proxy 代理"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/09/nuxt/nuxt-proxy/" title="nuxt-proxy 代理">nuxt-proxy 代理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-09T14:54:07.000Z" title="发表于 2020-07-09 22:54:07">2020-07-09</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-07-09T14:54:07.000Z" title="更新于 2020-07-09 22:54:07">2020-07-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/nuxt/">nuxt</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/nuxt/%E4%BB%A3%E7%90%86/">代理</a></span></div><div class="content">nuxt.js 点击页面跳转跨域
+使用nuxt.js做SSR有一个特点，就是在第一次打开页面的时候，不会存在跨域的问题。但是页面跳转的时候，就会出现跨域的问题了。
+
+问题——页面跳转会产生跨域问题
+由于公司要开发一个SSR的PC端项目，前几天选择使用nuxt.js搭建了一个项目，做了国际化，拦截等等。然后交给其他同时去开发了。今天同时突然问我，这是产生跨域了吧！但是代理配置了啊，为什么会产生跨域啊，让我帮他解决一下。我看了看之前写的代理，貌似没有什么问题，但就是产生跨域，这是为什么呢？代理也成功了，也运行了啊，为了解决这个问题感觉应该是只代理了接口，没有代理文件，由于是服务端渲染，而没有代理文件，页面跳转的时候拿文件的过程中就会出现跨域（感觉应该是这个问题）
+
+解决——使用@gauseen/nuxt-proxy做代理一、安装 @gauseen/nuxt-proxy 依赖资源123npm install --save-dev @gauseen/nuxt-proxyORyarn add --save-dev @gauseen/nuxt-proxy
+
+二、配置1234567891011121 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/07/nuxt/nuxt-i18n/" title="nuxt-i18n 国际化">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/20.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="nuxt-i18n 国际化"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/07/nuxt/nuxt-i18n/" title="nuxt-i18n 国际化">nuxt-i18n 国际化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-07T14:54:07.000Z" title="发表于 2020-07-07 22:54:07">2020-07-07</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-07-07T14:54:07.000Z" title="更新于 2020-07-07 22:54:07">2020-07-07</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/nuxt/">nuxt</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/nuxt/%E5%9B%BD%E9%99%85%E5%8C%96/">国际化</a></span></div><div class="content">前言
+​    由于本人的能力有限，如若有说得做的不对的地方，还望指出。当然，如若你有更好的方法，或者更优解，还望不吝赐教。
+
+1、需求
+根据需求，现在需要做一个服务端渲染的PC网站。SSR
+技术选型：Vue Vue-i18n  Nuxt.js  elementUI
+
+2、对于Vue-i8n在Nuxt.js中的使用
+首先说一下，nuxt.js和我们之前做的SPA单页面应用不一样，做国际化也不一样，之前已经写过在SPA中如何使用国际化，现在再写一下在SSR中如何使用国际化
+
+3、安装vue-i18n12npm install vue-i18n --saveyarn add vue-i18n --save
+
+
+
+4、在nuxt中引入vue-i18n
+在plugins文件夹下创建一个i18n.js文件，并写入如下代码
+1234567891011121314151617181920212223import Vue from &#x27;vue&#x27;import VueI18n from &#x27;vue-i18n&#x27;Vue.use(VueI18n)export default  ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Yunjie Ge</div><div class="author-info__description">你相信什么，你就看到什么</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">69</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">36</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">75</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/pythongyj"><i class="fab fa-github"></i><span>github</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">图片来源网络，如有侵权，个人主页联系方式联系我，必将在最短的时间内删除</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/07/05/build/gulp/" title="使用gulp从0到1构建项目"><img src="http://www.oss.qcwy.org.cn/mxt/2.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用gulp从0到1构建项目"/></a><div class="content"><a class="title" href="/2021/07/05/build/gulp/" title="使用gulp从0到1构建项目">使用gulp从0到1构建项目</a><time datetime="2021-07-05T13:33:07.000Z" title="发表于 2021-07-05 21:33:07">2021-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/13/vue/cq-vui/" title="写一个自己的UI组件库"><img src="http://www.blog.image.qcwy.org.cn/anime/29.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="写一个自己的UI组件库"/></a><div class="content"><a class="title" href="/2021/04/13/vue/cq-vui/" title="写一个自己的UI组件库">写一个自己的UI组件库</a><time datetime="2021-04-13T12:15:11.000Z" title="发表于 2021-04-13 20:15:11">2021-04-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/10/other/picture-bed/" title="mac图床配置"><img src="http://www.oss.qcwy.org.cn/b/picture-bed/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mac图床配置"/></a><div class="content"><a class="title" href="/2021/04/10/other/picture-bed/" title="mac图床配置">mac图床配置</a><time datetime="2021-04-10T10:54:07.000Z" title="发表于 2021-04-10 18:54:07">2021-04-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/18/life/life-2021-218/" title="生活杂谈"><img src="http://www.blog.image.qcwy.org.cn/bg/tangyan/dcf123c4615b865c794e2596b39a6f58.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生活杂谈"/></a><div class="content"><a class="title" href="/2021/02/18/life/life-2021-218/" title="生活杂谈">生活杂谈</a><time datetime="2021-02-18T10:24:12.000Z" title="发表于 2021-02-18 18:24:12">2021-02-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/11/target/2021-target/" title="2020总结与2021目标"><img src="http://www.blog.image.qcwy.org.cn/article/target/2021/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2020总结与2021目标"/></a><div class="content"><a class="title" href="/2021/02/11/target/2021-target/" title="2020总结与2021目标">2020总结与2021目标</a><time datetime="2021-02-11T11:06:25.000Z" title="发表于 2021-02-11 19:06:25">2021-02-11</time></div></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="card-content"><div class="item-headline"><i class="fas fa-bolt"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Emmet/"><span class="card-category-list-name">Emmet</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/common/"><span class="card-category-list-name">common</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/cookie/"><span class="card-category-list-name">cookie</span><span class="card-category-list-count">1</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/cookie/%E8%AE%BE%E7%BD%AEcookie/"><span class="card-category-list-name">设置cookie</span><span class="card-category-list-count">1</span></a></li></ul><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/"><span class="card-category-list-name">css</span><span class="card-category-list-count">9</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/fixed/"><span class="card-category-list-name">fixed</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/"><span class="card-category-list-name">三大特性</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/%E4%B8%8D%E5%B8%B8%E8%A7%81%E4%BD%86%E6%98%AF%E5%AE%9E%E7%94%A8css%E5%B1%9E%E6%80%A7/"><span class="card-category-list-name">不常见但是实用css属性</span><span class="card-category-list-count">1</span></a></li></ul>
+            <li class="card-category-list-item more is-center"><a class="card-category-list-link-more" href="/categories/">
+                <span>查看更多</span><i class="fas fa-angle-right"></i></a></li>
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/gulp/" style="font-size: 1.1em; color: rgb(180, 153, 32)">gulp</a><a href="/tags/css/" style="font-size: 1.43em; color: rgb(119, 77, 45)">css</a><a href="/tags/cookie/" style="font-size: 1.1em; color: rgb(120, 14, 42)">cookie</a><a href="/tags/docsify/" style="font-size: 1.1em; color: rgb(23, 144, 88)">docsify</a><a href="/tags/flutter/" style="font-size: 1.37em; color: rgb(160, 169, 53)">flutter</a><a href="/tags/hexo/" style="font-size: 1.17em; color: rgb(114, 46, 46)">hexo</a><a href="/tags/html/" style="font-size: 1.23em; color: rgb(10, 33, 152)">html</a><a href="/tags/Emmet/" style="font-size: 1.1em; color: rgb(83, 105, 122)">Emmet</a><a href="/tags/iconfont/" style="font-size: 1.1em; color: rgb(7, 10, 27)">iconfont</a><a href="/tags/vue/" style="font-size: 1.43em; color: rgb(91, 35, 39)">vue</a><a href="/tags/common-js/" style="font-size: 1.1em; color: rgb(17, 62, 174)">common.js</a><a href="/tags/cmd/" style="font-size: 1.1em; color: rgb(10, 46, 78)">cmd</a><a href="/tags/amd/" style="font-size: 1.1em; color: rgb(15, 164, 76)">amd</a><a href="/tags/js/" style="font-size: 1.5em; color: rgb(42, 160, 171)">js</a><a href="/tags/less/" style="font-size: 1.1em; color: rgb(146, 70, 70)">less</a><a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 1.17em; color: rgb(107, 184, 86)">生活</a><a href="/tags/npm/" style="font-size: 1.1em; color: rgb(30, 134, 184)">npm</a><a href="/tags/nuxt/" style="font-size: 1.23em; color: rgb(55, 118, 52)">nuxt</a><a href="/tags/i18n/" style="font-size: 1.17em; color: rgb(131, 111, 65)">i18n</a><a href="/tags/proxy/" style="font-size: 1.17em; color: rgb(10, 159, 9)">proxy</a><a href="/tags/%E5%85%B6%E4%BB%96/" style="font-size: 1.1em; color: rgb(145, 114, 89)">其他</a><a href="/tags/%E8%A7%84%E8%8C%83/" style="font-size: 1.1em; color: rgb(151, 126, 27)">规范</a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.1em; color: rgb(20, 70, 62)">图床</a><a href="/tags/%E7%9B%AE%E6%A0%87/" style="font-size: 1.1em; color: rgb(21, 147, 52)">目标</a><a href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" style="font-size: 1.1em; color: rgb(166, 195, 67)">高等数学</a><a href="/tags/shell/" style="font-size: 1.1em; color: rgb(80, 149, 8)">shell</a><a href="/tags/target/" style="font-size: 1.1em; color: rgb(150, 89, 65)">target</a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 1.3em; color: rgb(43, 47, 71)">数据结构与算法</a><a href="/tags/vscode/" style="font-size: 1.1em; color: rgb(46, 161, 117)">vscode</a><a href="/tags/vant/" style="font-size: 1.23em; color: rgb(129, 196, 32)">vant</a><a href="/tags/%E5%9F%BA%E7%A1%80-%E4%B8%80/" style="font-size: 1.1em; color: rgb(4, 122, 149)">基础 一</a><a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 1.1em; color: rgb(111, 72, 110)">小程序</a><a href="/tags/yarn/" style="font-size: 1.1em; color: rgb(76, 198, 100)">yarn</a><a href="/tags/react/" style="font-size: 1.1em; color: rgb(108, 180, 85)">react</a><a href="/tags/nginx/" style="font-size: 1.1em; color: rgb(194, 94, 74)">nginx</a><a href="/tags/ui/" style="font-size: 1.17em; color: rgb(139, 163, 188)">ui</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">八月 2020</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item more is-center"><a class="card-archive-list-link-more" href="/archives/">
+              <span>查看更多</span><i class="fas fa-angle-right"  ></i></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">69</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2017-06-06T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">58k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-07-07T03:06:21.060Z"></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(http://www.blog.image.qcwy.org.cn/bg/tangyan/222.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2021 By Yunjie Ge</div><div class="footer_custom_text"><span>浙ICP备19013115号-2 宁可辛苦一阵子，不要辛苦一辈子</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "你相信什么，你就看到什么".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: false,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '你'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+} else {
+  subtitleType()
+}</script><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    $.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js', function () {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      true && mermaid.init()
+    })
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script></div></body></html>

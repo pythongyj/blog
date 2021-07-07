@@ -1,0 +1,451 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>长情 - 梦幻人生</title><meta name="keywords" content="html,css,js,node,vue,react,dart,flutter"><meta name="author" content="Yunjie Ge,1329712473@qq.com"><meta name="copyright" content="Yunjie Ge"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="你相信什么，你就看到什么">
+<meta property="og:type" content="website">
+<meta property="og:title" content="长情">
+<meta property="og:url" content="http://www.cq.qcwy.org.cn/page/6/index.html">
+<meta property="og:site_name" content="长情">
+<meta property="og:description" content="你相信什么，你就看到什么">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg">
+<meta property="article:author" content="Yunjie Ge">
+<meta property="article:tag" content="html,css,js,node,vue,react,dart,flutter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg"><link rel="shortcut icon" href="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg"><link rel="canonical" href="http://www.cq.qcwy.org.cn/page/6/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/image/pwa/apple-touch-icon.png"/><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Yunjie Ge","link":"链接: ","source":"来源: 长情","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: {"text":"I,LOVE,YOU","fontSize":"15px"},
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-07-07 11:06:21'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><style type="text/css">#toggle-sidebar {bottom: 80px}#toggle-sidebar {left:100px}</style><meta name="generator" content="Hexo 5.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">69</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">36</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">75</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 音视频</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 优秀资源</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://www.css.case.qcwy.org.cn/"><span> CSS Demo</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#"><span> ES6</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.ui.qcwy.org.cn/"><span> UI设计</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.big.school.qcwy.org.cn/"><span> Big School</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(http://www.blog.image.qcwy.org.cn/bg/tangyan/222.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">长情</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 音视频</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 优秀资源</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://www.css.case.qcwy.org.cn/"><span> CSS Demo</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#"><span> ES6</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.ui.qcwy.org.cn/"><span> UI设计</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.big.school.qcwy.org.cn/"><span> Big School</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">长情</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2018/09/16/css/css-attr-practical/" title="那些不常见，但却非常实用的 css 属性">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/5.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="那些不常见，但却非常实用的 css 属性"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/09/16/css/css-attr-practical/" title="那些不常见，但却非常实用的 css 属性">那些不常见，但却非常实用的 css 属性</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-09-16T13:33:07.000Z" title="发表于 2018-09-16 21:33:07">2018-09-16</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2018-09-16T13:33:07.000Z" title="更新于 2018-09-16 21:33:07">2018-09-16</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/css/">css</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/css/%E4%B8%8D%E5%B8%B8%E8%A7%81%E4%BD%86%E6%98%AF%E5%AE%9E%E7%94%A8css%E5%B1%9E%E6%80%A7/">不常见但是实用css属性</a></span></div><div class="content">前言
+本文是本人在网络上看到的好的文章，好的 博客等等一切好的东西的地址。
+如有侵犯作者权益的任何行为，请及时与本人沟通，本人将及时处理。
+本人做这篇收集博客的主要初衷是为了自己和小伙伴能够更好的学习复习了解掌握更多的知识。
+如有带来不便，请见谅！
+
+
+原文链接  如若想看原文。请点击
+
+常见实用的css属性1、-webkit-line-clamp
+作用： 可以把 块容器 中的内容限制为指定的行数。并且在超过行数后，在最后一行显示”…” 
+使用场景： 在文本内容多少不确定，但显示区域确定的时候，一般使用这个属性做限定
+代码：
+1234display: -webkit-box; /*值必须为-webkit-box或者-webkit-inline-box*/-webkit-box-orient: vertical; /*值必须为vertical*/-webkit-line-clamp: 2; /*值为数字，表示一共显示几行*/overflow: hidden; /*超出隐藏。必须设置*/
+
+查看MDN 请点击
+
+2、all
+作用：将除却 unicode-bidi 与 direction 之 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2018/09/12/css/css-line-text/" title="css 中间文字 两端横线">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="css 中间文字 两端横线"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/09/12/css/css-line-text/" title="css 中间文字 两端横线">css 中间文字 两端横线</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-09-12T13:33:07.000Z" title="发表于 2018-09-12 21:33:07">2018-09-12</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2018-09-12T13:33:07.000Z" title="更新于 2018-09-12 21:33:07">2018-09-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/css/">css</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/css/%E4%B8%AD%E9%97%B4%E6%96%87%E5%AD%97-%E4%B8%A4%E7%AB%AF%E6%A8%AA%E7%BA%BF/">中间文字 两端横线</a></span></div><div class="content">前言
+本人水平有限，文章内容难免会出现问题，如果有问题欢迎指出，谢谢
+
+方式一 为元素加定位的方式
+dome链接地址 http://www.example.geyunjie.com/css/line
+
+
+html 代码
+
+123&lt;body&gt;    &lt;div class=&quot;dome1&quot;&gt;测试一下&lt;/div&gt;&lt;/body&gt;
+
+css 代码
+
+12345678910111213141516171819202122232425262728&lt;style&gt;    .dome1&#123;       text-align: center;        position: relative;    &#125;    .dome1::after&#123;        position: absolute;        content: &quot;&quot;;        display: block;        width: 40%;        height: 0;        border: 1 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2018/09/12/other/classic-article/" title="好的文章 好的博客  好的语录等等">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="好的文章 好的博客  好的语录等等"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/09/12/other/classic-article/" title="好的文章 好的博客  好的语录等等">好的文章 好的博客  好的语录等等</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-09-12T13:33:07.000Z" title="发表于 2018-09-12 21:33:07">2018-09-12</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2018-09-12T13:33:07.000Z" title="更新于 2018-09-12 21:33:07">2018-09-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E4%BB%96/">其他</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E4%BB%96/%E5%A5%BD%E7%9A%84%E6%96%87%E7%AB%A0-%E5%A5%BD%E7%9A%84%E5%8D%9A%E5%AE%A2-%E5%A5%BD%E7%9A%84%E8%AF%AD%E5%BD%95%E7%AD%89%E7%AD%89/">好的文章 好的博客  好的语录等等</a></span></div><div class="content">前言
+本文是本人在网络上看到的好的文章，好的 博客等等一切好的东西的地址。
+如有侵犯作者权益的任何行为，请及时与本人沟通，本人将及时处理。
+本人做这篇收集博客的主要初衷是为了自己和小伙伴能够更好的学习复习了解掌握更多的知识。
+如有带来不便，请见谅！
+
+html篇css篇js篇nodejs篇vue篇1.vue.js 组件复用和扩展之道2.你可能不知道的一些Vue实战技巧代码整洁之道1.编写自文档化JavaScript的15种方法MAC 篇1、Mac 键盘快捷键性能优化1.第51期 网易云音乐前端性能监控实践 &amp; 那些不常见却非常实用的css属性 &amp; 携程RN渲染性能优化实践
+注意：部分文章可能会在不就的将来更新
+如果能够帮助到你，是小编最大的荣幸
+当然   有 不好的地方  请大家帮忙指出   学习永无止境    
+小编一直认为  人外有人  天外有天    一起学习   共同进步
+让我们共同加油吧！！！
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2018/08/15/js/amdcmdcom/" title="CommonJS, AMD, CMD的区别">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/1.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CommonJS, AMD, CMD的区别"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/08/15/js/amdcmdcom/" title="CommonJS, AMD, CMD的区别">CommonJS, AMD, CMD的区别</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-08-15T10:54:07.000Z" title="发表于 2018-08-15 18:54:07">2018-08-15</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2018-08-15T10:54:07.000Z" title="更新于 2018-08-15 18:54:07">2018-08-15</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/common/">common</a></span></div><div class="content">CommonJS, AMD, CMD都是JS模块化的规范。CommonJS是服务器端js模块化的规范，NodeJS是这种规范的实现。AMD(异步模块定义)和CMD(通用模块定义)都是浏览器端js模块化的规范。RequireJS 遵循的是 AMD，SeaJS 遵循的是 CMD
+CommonJS（同步模块定义）一个单独的文件就是一个模块加载模块使用require方法，该方法读取一个文件并执行，最后返回文件内部的exports对象所以，定义一个模块就是写一个新的js文件，但是最后要将文件的内容exports出来
+
+如何定义模块和加载模块？
+
+123456789101112131415161718192021222324252627282930//定义一个module.js文件var A = function() &#123;    console.log(&#x27;我是定义的模块&#x27;);&#125;/*  * 导出这个模块 * 1.第一种返回方式 module.exports = A;  * 2.第二种返回方式 module.exports.test = A * 3.第三种返回方式 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2018/08/15/vue/vue-1/" title="vue基础 一 之 指令">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/bg/fengjing/lengjingjpeg.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue基础 一 之 指令"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/08/15/vue/vue-1/" title="vue基础 一 之 指令">vue基础 一 之 指令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-08-15T10:54:07.000Z" title="发表于 2018-08-15 18:54:07">2018-08-15</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-20T10:19:15.520Z" title="更新于 2020-11-20 18:19:15">2020-11-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/vue/">vue</a></span></div><div class="content">vue基础指令以及案例v-html与v-text
+v-html 可以渲染标签   但存在隐患    在敏感的地方使用可能会造成 跨站脚本攻击
+v-text 会直接把标签当成文本渲染
+
+v-cloak
+v-cloak 的作用是阻止页面在mounted之前渲染标签内的数据   也就是说在插值表达式没有被替换之前，不渲染页面
+
+v-bind 与 v-on
+v-bind 绑定属性   缩写为  ：
+v-on 绑定事件     缩写为 @
+
+跑马灯例子
+事件修饰符
+.stop 阻止事件冒泡
+.prevent 阻止默认事件（阻止默认行为）
+.capture 实现捕获触发事件
+.self 只有点击自己的时候才会触发
+.once 只触发一次
+
+.stop 和 .self 的区别
+相同点：都能阻止冒泡
+不同点：stop阻止所有的事件冒泡   self只阻止了自己的事件冒泡（其他组件还是会冒泡）
+
+v-model实现表单元素 和model 中的数据双向绑定  只能使用在  表单元素中
+是v-on 和 v-bind 在表单上同时使用时的 语法糖
+简易计算器
+样式绑定使用class绑定样式
+数组：这是一个可爱 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2018/07/13/html/layout/" title="布局">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/15.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="布局"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/07/13/html/layout/" title="布局">布局</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-07-13T15:13:49.000Z" title="发表于 2018-07-13 23:13:49">2018-07-13</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2018-07-13T15:13:49.000Z" title="更新于 2018-07-13 23:13:49">2018-07-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/html/">html</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/html/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/">页面布局</a></span></div><div class="content">布局，是每个前端工程师的基本功。结合自己的学习，总结一下自己所了解的一些比较重要的关于布局的一些知识
+比如：两栏布局，三栏布局（统称为多栏布局），等高布局等等
+两栏布局定宽做法css代码
+123456789101112131415161718.container&#123;  background-color: #008c8c;&#125;.aside&#123;  float: left;  background-color: brown;  width: 300px;&#125;.main&#123;  float: right;  background-color: blueviolet;  width: 1000px;&#125;.clearfix::after&#123;  content: &#x27;&#x27;;  display: block;  clear: both;&#125;
+
+html代码
+1234&lt;div class=&quot;container clearfix&quot;&gt;    &lt;aside class=&quot;aside&q ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2018/05/12/js/qureyUrlParams/" title="获取url的各个参数的值">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/23.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="获取url的各个参数的值"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/05/12/js/qureyUrlParams/" title="获取url的各个参数的值">获取url的各个参数的值</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-05-12T03:33:07.000Z" title="发表于 2018-05-12 11:33:07">2018-05-12</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2018-05-12T03:33:07.000Z" title="更新于 2018-05-12 11:33:07">2018-05-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/js/">js</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/js/%E8%8E%B7%E5%8F%96url%E7%9A%84%E5%90%84%E4%B8%AA%E5%8F%82%E6%95%B0%E7%9A%84%E5%80%BC/">获取url的各个参数的值</a></span></div><div class="content">思路由于下面的代码用的是简写的方式  为了所有人都能看得懂   或者说即使看不懂   看到思路  根据思路也能实现、所以写了以下的个人思路  有不好的  请私信我   对于私信的人  感激不尽  因为的你私信会让小编更上一层楼
+
+
+定义一个url地址（就是确定要 解析的url地址）
+定义一个方法用来解析参数
+方法：先创建一个对象，用于存放参数的键值对
+方法：先判断传入的参数是否为空   为空  直接返回一个空对象，不为空  进行解析
+方法：使用split方法把  ？  符号之前的数据剔除
+方法：使用split方法把数据以  &amp;  作为切割点  切割成数组
+方法：使用forEach对切割好的数组进行遍历
+方法：再次使用split方法 把遍历的每一项 以  =  进行分割   分割成的数组的第一项作为 key 属性  第二项作为  value  属性  存放到之前定义好的 空对象中
+方法：返回这个对象
+
+
+具体实现代码123456789101112131415161718// 定义一个需要传递的URL  const url = &#x27;https://www.baidu.com ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2018/04/19/other/norm/" title="前端规范">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/18.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端规范"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/04/19/other/norm/" title="前端规范">前端规范</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-04-19T10:54:07.000Z" title="发表于 2018-04-19 18:54:07">2018-04-19</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2018-04-19T10:54:07.000Z" title="更新于 2018-04-19 18:54:07">2018-04-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E4%BB%96/">其他</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E4%BB%96/%E8%A7%84%E8%8C%83/">规范</a></span></div><div class="content">前端规范
+命名规则
+
+
+头 : header
+内容 : content/container
+尾部 : footer
+导航 : nav
+侧栏 : sidebar
+栏目 : column
+外围盒子控制整体布局 : wrapper
+左 右 中 : left / center / right
+登录条 : loginbar
+标志 : logo
+广告 : banner
+页面主题 : main
+热点 : hot
+新闻 : news
+下载 : download
+子导航 : subnav
+菜单 : menu
+子菜单 : submenu
+搜索 : search
+友情链接 : friendlink
+页脚 : footer
+版权 : copyright
+滚动 : scroll
+内容 : content
+标签页 : tab
+文章列表 : list
+提示信息 : msg
+小技巧 : tips
+栏目标题 : title
+加入 : joinus
+指南 : guild
+服务 : service
+注册 : regsiter
+状态 : status
+投票 : vote
+合作伙伴 : partner
+
+
+注释的写法
+
+123 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2018/04/15/wx/login-wx/" title="微信小程序登录验证">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/17.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="微信小程序登录验证"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/04/15/wx/login-wx/" title="微信小程序登录验证">微信小程序登录验证</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-04-15T00:54:07.000Z" title="发表于 2018-04-15 08:54:07">2018-04-15</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2018-04-15T00:54:07.000Z" title="更新于 2018-04-15 08:54:07">2018-04-15</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">小程序</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/wx/">wx</a></span></div><div class="content">流程图在说怎么做之前，先看下这个流程图
+
+思路看完这个流程图 ，相必大家已经很清楚了。
+为了防止大家不太明白，再次给大家聊一下流程图
+
+在授权之前，应该选判断是否已经授权。因为在别的地方已经授权了
+已授权：直接跳过授权的过程，进行本该进行的操作
+未授权：进如以下流程进行授权
+
+
+获取用户信息。
+由于用户信息是隐私为题，需要征求用户的同意。所以，把这一步放到第二步，而不是第三步。
+用户同意获取用户信息：获取用户系信息
+用户不同意获取用户信息：终止以下操作，返回最开始授权之前的页面
+
+
+使用微信提供的API接口wx.login()，请求微信的服务器，获取code
+成功：返回code
+失败：返回错误信息
+
+
+使用获取到的用户信息+code向公司的服务器发起获取Token的  接口  请求。服务器根据传递的数据进行判断
+请求成功：返回token 和请求成功的  状态信息等
+请求失败：返回失败的  错误信息  比如：code不一致等（后端程序员编写具体的接口返回内容）
+
+
+当请求成功后，进行本地存储  ，并开始授权之前的操作
+使用微信小程序提供的API接口，进行本地存储
+以后再有地方需要toke ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2018/03/21/js/js-set-html-font-size/" title="js获取html到fontSize大小">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/14.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="js获取html到fontSize大小"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/03/21/js/js-set-html-font-size/" title="js获取html到fontSize大小">js获取html到fontSize大小</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-03-21T11:03:39.000Z" title="发表于 2018-03-21 19:03:39">2018-03-21</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2018-03-21T11:03:39.000Z" title="更新于 2018-03-21 19:03:39">2018-03-21</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/js/">js</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/js/%E8%8E%B7%E5%8F%96html%E5%88%B0fontSize%E5%A4%A7%E5%B0%8F/">获取html到fontSize大小</a></span></div><div class="content">前言
+​    由于本人的能力有限，如若有说得做的不对的地方，还望指出。当然，如若你有更好的方法，或者更优解，还望不吝赐教。
+
+获取视窗高度1let htmlWidthPX = document.documentElement.clientWidth || document.body.clientWidth
+
+获取html的font-size1let htmlFontSizePX=document.getElementsByTagName(&#x27;html&#x27;)[0].style.fontSize
+
+设置fontSize1document.getElementsByTagName(&#x27;html&#x27;)[0].style.fontSize= xxx + &quot;px&quot;
+
+
+
+更新
+1.window.getComputedStyle(element, [pseudoElt]) 获取指定元素对应CSS属性的最终计算值
+
+官方解释
+
+参数解析
+
+element：必需，要获取样式值的元素对象
+pseudoElt：可选，表示指定节点的伪元素（:before、 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/5/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Yunjie Ge</div><div class="author-info__description">你相信什么，你就看到什么</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">69</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">36</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">75</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/pythongyj"><i class="fab fa-github"></i><span>github</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">图片来源网络，如有侵权，个人主页联系方式联系我，必将在最短的时间内删除</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/07/05/build/gulp/" title="使用gulp从0到1构建项目"><img src="http://www.oss.qcwy.org.cn/mxt/2.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用gulp从0到1构建项目"/></a><div class="content"><a class="title" href="/2021/07/05/build/gulp/" title="使用gulp从0到1构建项目">使用gulp从0到1构建项目</a><time datetime="2021-07-05T13:33:07.000Z" title="发表于 2021-07-05 21:33:07">2021-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/13/vue/cq-vui/" title="写一个自己的UI组件库"><img src="http://www.blog.image.qcwy.org.cn/anime/29.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="写一个自己的UI组件库"/></a><div class="content"><a class="title" href="/2021/04/13/vue/cq-vui/" title="写一个自己的UI组件库">写一个自己的UI组件库</a><time datetime="2021-04-13T12:15:11.000Z" title="发表于 2021-04-13 20:15:11">2021-04-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/10/other/picture-bed/" title="mac图床配置"><img src="http://www.oss.qcwy.org.cn/b/picture-bed/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mac图床配置"/></a><div class="content"><a class="title" href="/2021/04/10/other/picture-bed/" title="mac图床配置">mac图床配置</a><time datetime="2021-04-10T10:54:07.000Z" title="发表于 2021-04-10 18:54:07">2021-04-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/18/life/life-2021-218/" title="生活杂谈"><img src="http://www.blog.image.qcwy.org.cn/bg/tangyan/dcf123c4615b865c794e2596b39a6f58.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生活杂谈"/></a><div class="content"><a class="title" href="/2021/02/18/life/life-2021-218/" title="生活杂谈">生活杂谈</a><time datetime="2021-02-18T10:24:12.000Z" title="发表于 2021-02-18 18:24:12">2021-02-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/11/target/2021-target/" title="2020总结与2021目标"><img src="http://www.blog.image.qcwy.org.cn/article/target/2021/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2020总结与2021目标"/></a><div class="content"><a class="title" href="/2021/02/11/target/2021-target/" title="2020总结与2021目标">2020总结与2021目标</a><time datetime="2021-02-11T11:06:25.000Z" title="发表于 2021-02-11 19:06:25">2021-02-11</time></div></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="card-content"><div class="item-headline"><i class="fas fa-bolt"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Emmet/"><span class="card-category-list-name">Emmet</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/common/"><span class="card-category-list-name">common</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/cookie/"><span class="card-category-list-name">cookie</span><span class="card-category-list-count">1</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/cookie/%E8%AE%BE%E7%BD%AEcookie/"><span class="card-category-list-name">设置cookie</span><span class="card-category-list-count">1</span></a></li></ul><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/"><span class="card-category-list-name">css</span><span class="card-category-list-count">9</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/fixed/"><span class="card-category-list-name">fixed</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/"><span class="card-category-list-name">三大特性</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/%E4%B8%8D%E5%B8%B8%E8%A7%81%E4%BD%86%E6%98%AF%E5%AE%9E%E7%94%A8css%E5%B1%9E%E6%80%A7/"><span class="card-category-list-name">不常见但是实用css属性</span><span class="card-category-list-count">1</span></a></li></ul>
+            <li class="card-category-list-item more is-center"><a class="card-category-list-link-more" href="/categories/">
+                <span>查看更多</span><i class="fas fa-angle-right"></i></a></li>
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/gulp/" style="font-size: 1.1em; color: rgb(180, 153, 32)">gulp</a><a href="/tags/css/" style="font-size: 1.43em; color: rgb(119, 77, 45)">css</a><a href="/tags/cookie/" style="font-size: 1.1em; color: rgb(120, 14, 42)">cookie</a><a href="/tags/docsify/" style="font-size: 1.1em; color: rgb(23, 144, 88)">docsify</a><a href="/tags/flutter/" style="font-size: 1.37em; color: rgb(160, 169, 53)">flutter</a><a href="/tags/hexo/" style="font-size: 1.17em; color: rgb(114, 46, 46)">hexo</a><a href="/tags/html/" style="font-size: 1.23em; color: rgb(10, 33, 152)">html</a><a href="/tags/Emmet/" style="font-size: 1.1em; color: rgb(83, 105, 122)">Emmet</a><a href="/tags/iconfont/" style="font-size: 1.1em; color: rgb(7, 10, 27)">iconfont</a><a href="/tags/vue/" style="font-size: 1.43em; color: rgb(91, 35, 39)">vue</a><a href="/tags/common-js/" style="font-size: 1.1em; color: rgb(17, 62, 174)">common.js</a><a href="/tags/cmd/" style="font-size: 1.1em; color: rgb(10, 46, 78)">cmd</a><a href="/tags/amd/" style="font-size: 1.1em; color: rgb(15, 164, 76)">amd</a><a href="/tags/js/" style="font-size: 1.5em; color: rgb(42, 160, 171)">js</a><a href="/tags/less/" style="font-size: 1.1em; color: rgb(146, 70, 70)">less</a><a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 1.17em; color: rgb(107, 184, 86)">生活</a><a href="/tags/npm/" style="font-size: 1.1em; color: rgb(30, 134, 184)">npm</a><a href="/tags/nuxt/" style="font-size: 1.23em; color: rgb(55, 118, 52)">nuxt</a><a href="/tags/i18n/" style="font-size: 1.17em; color: rgb(131, 111, 65)">i18n</a><a href="/tags/proxy/" style="font-size: 1.17em; color: rgb(10, 159, 9)">proxy</a><a href="/tags/%E5%85%B6%E4%BB%96/" style="font-size: 1.1em; color: rgb(145, 114, 89)">其他</a><a href="/tags/%E8%A7%84%E8%8C%83/" style="font-size: 1.1em; color: rgb(151, 126, 27)">规范</a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.1em; color: rgb(20, 70, 62)">图床</a><a href="/tags/%E7%9B%AE%E6%A0%87/" style="font-size: 1.1em; color: rgb(21, 147, 52)">目标</a><a href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" style="font-size: 1.1em; color: rgb(166, 195, 67)">高等数学</a><a href="/tags/shell/" style="font-size: 1.1em; color: rgb(80, 149, 8)">shell</a><a href="/tags/target/" style="font-size: 1.1em; color: rgb(150, 89, 65)">target</a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 1.3em; color: rgb(43, 47, 71)">数据结构与算法</a><a href="/tags/vscode/" style="font-size: 1.1em; color: rgb(46, 161, 117)">vscode</a><a href="/tags/vant/" style="font-size: 1.23em; color: rgb(129, 196, 32)">vant</a><a href="/tags/%E5%9F%BA%E7%A1%80-%E4%B8%80/" style="font-size: 1.1em; color: rgb(4, 122, 149)">基础 一</a><a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 1.1em; color: rgb(111, 72, 110)">小程序</a><a href="/tags/yarn/" style="font-size: 1.1em; color: rgb(76, 198, 100)">yarn</a><a href="/tags/react/" style="font-size: 1.1em; color: rgb(108, 180, 85)">react</a><a href="/tags/nginx/" style="font-size: 1.1em; color: rgb(194, 94, 74)">nginx</a><a href="/tags/ui/" style="font-size: 1.17em; color: rgb(139, 163, 188)">ui</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">八月 2020</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item more is-center"><a class="card-archive-list-link-more" href="/archives/">
+              <span>查看更多</span><i class="fas fa-angle-right"  ></i></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">69</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2017-06-06T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">58k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-07-07T03:06:21.060Z"></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(http://www.blog.image.qcwy.org.cn/bg/tangyan/222.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2021 By Yunjie Ge</div><div class="footer_custom_text"><span>浙ICP备19013115号-2 宁可辛苦一阵子，不要辛苦一辈子</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "你相信什么，你就看到什么".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: false,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '你'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+} else {
+  subtitleType()
+}</script><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    $.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js', function () {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      true && mermaid.init()
+    })
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script></div></body></html>

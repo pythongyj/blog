@@ -1,0 +1,383 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>mac图床配置 | 长情</title><meta name="keywords" content="图床,upic,ipic,mac"><meta name="author" content="Yunjie Ge,1329712473@qq.com"><meta name="copyright" content="Yunjie Ge"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="图床,upic,ipic,mac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mac图床配置">
+<meta property="og:url" content="http://www.cq.qcwy.org.cn/2021/04/10/other/picture-bed/index.html">
+<meta property="og:site_name" content="长情">
+<meta property="og:description" content="图床,upic,ipic,mac">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.oss.qcwy.org.cn/b/picture-bed/cover.jpg">
+<meta property="article:published_time" content="2021-04-10T10:54:07.000Z">
+<meta property="article:modified_time" content="2021-04-10T10:54:07.000Z">
+<meta property="article:author" content="Yunjie Ge">
+<meta property="article:tag" content="图床">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.oss.qcwy.org.cn/b/picture-bed/cover.jpg"><link rel="shortcut icon" href="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg"><link rel="canonical" href="http://www.cq.qcwy.org.cn/2021/04/10/other/picture-bed/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/image/pwa/apple-touch-icon.png"/><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Yunjie Ge","link":"链接: ","source":"来源: 长情","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: {"text":"I,LOVE,YOU","fontSize":"15px"},
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-04-10 18:54:07'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><style type="text/css">#toggle-sidebar {bottom: 80px}#toggle-sidebar {left:100px}</style><meta name="generator" content="Hexo 5.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">69</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">36</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">75</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 音视频</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 优秀资源</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://www.css.case.qcwy.org.cn/"><span> CSS Demo</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#"><span> ES6</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.ui.qcwy.org.cn/"><span> UI设计</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.big.school.qcwy.org.cn/"><span> Big School</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(http://www.oss.qcwy.org.cn/b/picture-bed/bg.jpeg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">长情</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 音视频</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 优秀资源</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://www.css.case.qcwy.org.cn/"><span> CSS Demo</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#"><span> ES6</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.ui.qcwy.org.cn/"><span> UI设计</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.big.school.qcwy.org.cn/"><span> Big School</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">mac图床配置</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-10T10:54:07.000Z" title="发表于 2021-04-10 18:54:07">2021-04-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-04-10T10:54:07.000Z" title="更新于 2021-04-10 18:54:07">2021-04-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%9B%BE%E5%BA%8A/">图床</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">779</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2021/04/10/other/picture-bed/#post-comment"><span class="gitalk-comment-count comment-count"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>写博客等其他一些文章的时候，都会用到一些图片进行说明。</p>
+<p>然而每次用图片的时候都是手动传，然后再使用链接！好麻烦的有木有！</p>
+<p>最近买了个oss，手动上传有点麻烦，就想着搞个图床算了！结果就有了下面这篇文章。</p>
+</blockquote>
+<h2 id="1、阿里云OSS"><a href="#1、阿里云OSS" class="headerlink" title="1、阿里云OSS"></a>1、阿里云OSS</h2><h3 id="1-1、购买阿里云OSS"><a href="#1-1、购买阿里云OSS" class="headerlink" title="1.1、购买阿里云OSS"></a>1.1、购买阿里云OSS</h3><blockquote>
+<p>首先你需要购买一个阿里云OSS，当然其他平台的也是可以的！这里不做详细说明，毕竟只是买个东西！</p>
+</blockquote>
+<h3 id="1-2、配置OSS"><a href="#1-2、配置OSS" class="headerlink" title="1.2、配置OSS"></a>1.2、配置OSS</h3><blockquote>
+<p><img src="http://www.oss.qcwy.org.cn/b/picture-bed/image-20210412095450789.png" alt="image-20210412095450789"></p>
+<p>如图所示：</p>
+<p>在控制台里点击OSS后显示的界面如图所示！</p>
+<p>点击<strong>创建Bucket</strong>创建一个Bucket。创建过程不再讲解！没啥东西，具体有文档的嘛！</p>
+<p>注意：这里要点<strong>常用入口–&gt;Access Key</strong>（上图）。进入如下页面</p>
+<p><img src="http://www.oss.qcwy.org.cn/b/picture-bed/image-20210412100449636.png" alt="image-20210412100449636"></p>
+<p>点击开始使用进入</p>
+<p><img src="http://www.oss.qcwy.org.cn/b/picture-bed/image-20210412100635669.png" alt="image-20210412100635669"></p>
+<p>创建成功后</p>
+<p><img src="http://www.oss.qcwy.org.cn/b/picture-bed/image-20210412100740922.png" alt="image-20210412100740922"></p>
+<p>Access Key 和Secret Key可一先保存下来，得会会用到的！</p>
+<p>如果想使用自己的域名作为图片的链接地址的话，可以根据文档进行配置</p>
+</blockquote>
+<h2 id="2、图床工具设置"><a href="#2、图床工具设置" class="headerlink" title="2、图床工具设置"></a>2、图床工具设置</h2><h3 id="2-1、下载图床软件"><a href="#2-1、下载图床软件" class="headerlink" title="2.1、下载图床软件"></a>2.1、下载图床软件</h3><blockquote>
+<p>一开始我是想用ipic的，但是中所周知MAC电脑大多软件都要钱。这个软件用不起！最终换成了upic作为图床工具。</p>
+<p>下载方式：<a target="_blank" rel="noopener" href="https://github.com/gee1k/uPic">地址</a></p>
+<p>可以先去软件的github，然后根据说明在MAC命令行中执行一行代码就可以了！（需要homebrew哦）</p>
+<p>命令：<strong>brew cask install upic</strong></p>
+</blockquote>
+<h3 id="2-2、配置图床"><a href="#2-2、配置图床" class="headerlink" title="2.2、配置图床"></a>2.2、配置图床</h3><blockquote>
+<p>打开upic软件，选择偏好设置–&gt;图床–&gt; 点击加号–&gt;选择阿里云OSS。显示如图</p>
+<p><img src="http://www.oss.qcwy.org.cn/b/picture-bed/image-20210412101840657.png" alt="image-20210412101840657"></p>
+<p>根据上面的显示填写正确完整即可。Access Key 和Secret Key上面已经申请过，复制进去即可，空间名称为你的<strong>Bucket</strong>的名称。域名如果你设置了自有域名的话就天自己的，没有的话就写<strong>Bucket</strong>的外网Bucket域名即可。</p>
+<p>最后点击验证，如果提示上传成功，就代表完成。</p>
+</blockquote>
+<h2 id="3、typora配置图床"><a href="#3、typora配置图床" class="headerlink" title="3、typora配置图床"></a>3、typora配置图床</h2><blockquote>
+<p>注意：版本太低的话，是不行的，没有配置的地方！升级一下就好了</p>
+<p>typora – &gt; 偏好设置–&gt;图像–&gt; 上传服务设定–&gt;选择uPic–&gt;验证图片上传选项–&gt;如果图示成功则代表设置完成。</p>
+<p>如图：</p>
+<p><img src="http://www.oss.qcwy.org.cn/b/picture-bed/image-20210412102652993.png" alt="image-20210412102652993"></p>
+<p>到此全部完成，以后再在typora上使用图片时，就会自动上传并转换为上传的地址。</p>
+<p><img src="http://www.oss.qcwy.org.cn/b/picture-bed/image-20210412103046602.png" alt="image-20210412103046602"></p>
+<p>这个也放在这吧！方便看一下</p>
+</blockquote>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><blockquote>
+<p>总的来说很简单，只是没有弄过的话会有点摸不着头脑，感觉是个什么高深的东西一样！其实当你配置一下就会发现，就这？哈哈哈</p>
+</blockquote>
+<p>原创文章：转载请联系我。未经允许，禁止转载。</p>
+<p>如果能够帮助到你，是小编最大的荣幸</p>
+<p>当然 有 不好的地方 请大家帮忙指出 学习永无止境</p>
+<p>小编一直认为 人外有人 天外有天 一起学习 共同进步</p>
+<p>让我们共同加油吧！！！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:1329712473@qq.com">Yunjie Ge</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://www.cq.qcwy.org.cn/2021/04/10/other/picture-bed/">http://www.cq.qcwy.org.cn/2021/04/10/other/picture-bed/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">转载请留言,未经许可禁止转载,转载时请注明出处(必须保留作者署名及链接)</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%9B%BE%E5%BA%8A/">图床</a></div><div class="post_share"><div class="social-share" data-image="http://www.oss.qcwy.org.cn/b/picture-bed/cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpeg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpeg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpeg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpeg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/04/13/vue/cq-vui/"><img class="prev-cover" src="http://www.blog.image.qcwy.org.cn/anime/29.jpeg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">写一个自己的UI组件库</div></div></a></div><div class="next-post pull-right"><a href="/2021/02/18/life/life-2021-218/"><img class="next-cover" src="http://www.blog.image.qcwy.org.cn/bg/tangyan/dcf123c4615b865c794e2596b39a6f58.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">生活杂谈</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Gitalk</span><span class="switch-btn"></span><span class="second-comment">Valine</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Yunjie Ge</div><div class="author-info__description">你相信什么，你就看到什么</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">69</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">36</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">75</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/pythongyj"><i class="fab fa-github"></i><span>github</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">图片来源网络，如有侵权，个人主页联系方式联系我，必将在最短的时间内删除</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E9%98%BF%E9%87%8C%E4%BA%91OSS"><span class="toc-number"></span> <span class="toc-text">1、阿里云OSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E3%80%81%E8%B4%AD%E4%B9%B0%E9%98%BF%E9%87%8C%E4%BA%91OSS"><span class="toc-number">1.</span> <span class="toc-text">1.1、购买阿里云OSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E3%80%81%E9%85%8D%E7%BD%AEOSS"><span class="toc-number">2.</span> <span class="toc-text">1.2、配置OSS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%9B%BE%E5%BA%8A%E5%B7%A5%E5%85%B7%E8%AE%BE%E7%BD%AE"><span class="toc-number"></span> <span class="toc-text">2、图床工具设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E3%80%81%E4%B8%8B%E8%BD%BD%E5%9B%BE%E5%BA%8A%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">2.1、下载图床软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E3%80%81%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BA%8A"><span class="toc-number">2.</span> <span class="toc-text">2.2、配置图床</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81typora%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BA%8A"><span class="toc-number"></span> <span class="toc-text">3、typora配置图床</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="toc-number"></span> <span class="toc-text">总结：</span></a></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/07/05/build/gulp/" title="使用gulp从0到1构建项目"><img src="http://www.oss.qcwy.org.cn/mxt/2.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用gulp从0到1构建项目"/></a><div class="content"><a class="title" href="/2021/07/05/build/gulp/" title="使用gulp从0到1构建项目">使用gulp从0到1构建项目</a><time datetime="2021-07-05T13:33:07.000Z" title="发表于 2021-07-05 21:33:07">2021-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/13/vue/cq-vui/" title="写一个自己的UI组件库"><img src="http://www.blog.image.qcwy.org.cn/anime/29.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="写一个自己的UI组件库"/></a><div class="content"><a class="title" href="/2021/04/13/vue/cq-vui/" title="写一个自己的UI组件库">写一个自己的UI组件库</a><time datetime="2021-04-13T12:15:11.000Z" title="发表于 2021-04-13 20:15:11">2021-04-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/10/other/picture-bed/" title="mac图床配置"><img src="http://www.oss.qcwy.org.cn/b/picture-bed/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mac图床配置"/></a><div class="content"><a class="title" href="/2021/04/10/other/picture-bed/" title="mac图床配置">mac图床配置</a><time datetime="2021-04-10T10:54:07.000Z" title="发表于 2021-04-10 18:54:07">2021-04-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/18/life/life-2021-218/" title="生活杂谈"><img src="http://www.blog.image.qcwy.org.cn/bg/tangyan/dcf123c4615b865c794e2596b39a6f58.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生活杂谈"/></a><div class="content"><a class="title" href="/2021/02/18/life/life-2021-218/" title="生活杂谈">生活杂谈</a><time datetime="2021-02-18T10:24:12.000Z" title="发表于 2021-02-18 18:24:12">2021-02-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/11/target/2021-target/" title="2020总结与2021目标"><img src="http://www.blog.image.qcwy.org.cn/article/target/2021/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2020总结与2021目标"/></a><div class="content"><a class="title" href="/2021/02/11/target/2021-target/" title="2020总结与2021目标">2020总结与2021目标</a><time datetime="2021-02-11T11:06:25.000Z" title="发表于 2021-02-11 19:06:25">2021-02-11</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(http://www.oss.qcwy.org.cn/b/picture-bed/bg.jpeg)"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2021 By Yunjie Ge</div><div class="footer_custom_text"><span>浙ICP备19013115号-2 宁可辛苦一阵子，不要辛苦一辈子</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    $.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js', function () {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      true && mermaid.init()
+    })
+  }
+}</script><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk({
+      clientID: 'abd6a19b087541550bd4',
+      clientSecret: 'eaaa72d3c11594b39acb1fbffe043e981a12c8d8',
+      repo: 'gitalk',
+      owner: 'pythongyj',
+      admin: ['pythongyj'],
+      id: '7c95cd90e2cf3bae3b152a5f8a5fa124',
+      language: 'zh-CN',
+      perPage: 10,
+      distractionFreeMode: false,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      updateCountCallback: commentCount
+    })
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    $.getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js', initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: 'sz3D4qARp0IMmUHg272iA2tH-gzGzoHsz',
+      appKey: 'TiwdbT2Fn3y2AJyg23g9myjG',
+      placeholder: '说出你想说的',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'en',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Gitalk' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script></div></body></html>

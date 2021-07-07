@@ -1,0 +1,525 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JavaScript正则表达式 | 长情</title><meta name="keywords" content="JavaScript正则表达式"><meta name="author" content="Yunjie Ge,1329712473@qq.com"><meta name="copyright" content="Yunjie Ge"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="JavaScript正则表达式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript正则表达式">
+<meta property="og:url" content="http://www.cq.qcwy.org.cn/2018/02/15/js/RegExp/index.html">
+<meta property="og:site_name" content="长情">
+<meta property="og:description" content="JavaScript正则表达式">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.blog.image.qcwy.org.cn/anime/24.jpg">
+<meta property="article:published_time" content="2018-02-15T12:33:07.000Z">
+<meta property="article:modified_time" content="2018-02-15T12:33:07.000Z">
+<meta property="article:author" content="Yunjie Ge">
+<meta property="article:tag" content="js">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.blog.image.qcwy.org.cn/anime/24.jpg"><link rel="shortcut icon" href="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg"><link rel="canonical" href="http://www.cq.qcwy.org.cn/2018/02/15/js/RegExp/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/image/pwa/apple-touch-icon.png"/><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Yunjie Ge","link":"链接: ","source":"来源: 长情","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: {"text":"I,LOVE,YOU","fontSize":"15px"},
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2018-02-15 20:33:07'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><style type="text/css">#toggle-sidebar {bottom: 80px}#toggle-sidebar {left:100px}</style><meta name="generator" content="Hexo 5.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">69</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">36</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">75</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 音视频</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 优秀资源</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://www.css.case.qcwy.org.cn/"><span> CSS Demo</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#"><span> ES6</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.ui.qcwy.org.cn/"><span> UI设计</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.big.school.qcwy.org.cn/"><span> Big School</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(http://www.blog.image.qcwy.org.cn/anime/24.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">长情</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 音视频</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 优秀资源</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://www.css.case.qcwy.org.cn/"><span> CSS Demo</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#"><span> ES6</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.ui.qcwy.org.cn/"><span> UI设计</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.big.school.qcwy.org.cn/"><span> Big School</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">JavaScript正则表达式</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-02-15T12:33:07.000Z" title="发表于 2018-02-15 20:33:07">2018-02-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2018-02-15T12:33:07.000Z" title="更新于 2018-02-15 20:33:07">2018-02-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/js/">js</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/js/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>20分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2018/02/15/js/RegExp/#post-comment"><span class="gitalk-comment-count comment-count"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>正则表达式是一种字符串规则，在很多处理字符串的场合能够发挥出不可估量的强大，比如表单验证，数据替换等等。<br>作为一名程序员，不管是前端还是后端，都应该掌握这门技术。<br>此文章是本人在学习正则表达式时的一些笔记，以及封装的一些比较常用且功能强大的函数。<br>希望这篇文章能够帮助到其他的小伙伴。<br>当然，可能有些封装的不尽完美，所以，不尽完美之处，还请请私信我。我们共同进步。</p>
+<h3 id="正则表达式-基础部分"><a href="#正则表达式-基础部分" class="headerlink" title="正则表达式 (基础部分)"></a>正则表达式 (基础部分)</h3><ul>
+<li>regular  expression : RegExp   正则表达式    <ul>
+<li>作用：<ul>
+<li>用来处理字符串的规则 </li>
+<li>只能处理字符串、</li>
+<li>他是一个规则   可以验证字符串是否符合某个规则(test方法)，也可以把字符串中符合规则的内容捕获到(exec/match方法)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="编写正则表达式"><a href="#编写正则表达式" class="headerlink" title="编写正则表达式"></a><strong>编写正则表达式</strong></h4><ul>
+<li><p>创建方式有两种</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//字面量的方式创建  (两个//之间包起来的都是用来描述正则规则的元字符)</span></span><br><span class="line"><span class="keyword">let</span> reg=<span class="regexp">/\d+/</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//实例的方式  构造函数创建   两个参数： 一个是元字符字符串    修饰符字符串</span></span><br><span class="line"><span class="keyword">let</span> reg1=<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">&#x27;\\d+&#x27;</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>正则表达式由两部分组成</p>
+<blockquote>
+<p>元字符</p>
+<p>修饰符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 1. 常用的元字符*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ==&gt;  1.量词元字符  设置出现的次数</span></span><br><span class="line"> <span class="comment">//  1. *  0到多次</span></span><br><span class="line"> <span class="comment">//  2. +  1到多次</span></span><br><span class="line"> <span class="comment">//  3. ？  0次 || 一次</span></span><br><span class="line"> <span class="comment">//  4. &#123;n&#125; 出现n次  n为大于0的正整数</span></span><br><span class="line"> <span class="comment">//  5. &#123;n,m&#125; 出现 n 到 m 次</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 2.特殊元字符 ： 单个或者组合在一起代表特殊的含义*/</span></span><br><span class="line"><span class="comment">// 1. \   转义字符（普通字符-&gt;特殊-&gt;普通）</span></span><br><span class="line"><span class="comment">// 2. .   除\n（换行符）以外的任意字符</span></span><br><span class="line"><span class="comment">// 3. ^   以哪一个元字符作为开始（^看瑞特符号）</span></span><br><span class="line"><span class="comment">// 4. $   以哪一个元字符作为结束</span></span><br><span class="line"><span class="comment">// 5. \n  换行符</span></span><br><span class="line"><span class="comment">// 6. \d  0~9之间的一个数字</span></span><br><span class="line"><span class="comment">// 7. \D  非0~9之间的一个数字</span></span><br><span class="line"><span class="comment">// 8. \w  数字、字母、下划线 中的任意一个字符</span></span><br><span class="line"><span class="comment">// 9. \s  一个空白字符  （包含空格  制表符  换页符等）</span></span><br><span class="line"><span class="comment">// 10.\t  一个制表符  （一个TAB键：4个空格）</span></span><br><span class="line"><span class="comment">// 11.\b  匹配一个单词的边界</span></span><br><span class="line"><span class="comment">// 12.x|y x或者y中的一个字符</span></span><br><span class="line"><span class="comment">// 13.[xyz] x或者y或者z中的一个字符</span></span><br><span class="line"><span class="comment">// 14.[^xy] 除了x、y以外的字符</span></span><br><span class="line"><span class="comment">// 15.[a-z] 指定a到z这个范围中的任意字符   [0-9a-zA-Z_] === \w</span></span><br><span class="line"><span class="comment">// 16.[^a-z] 15/条的取反</span></span><br><span class="line"><span class="comment">// 17.()  正则中的分组</span></span><br><span class="line"><span class="comment">// 18.(?:) 只匹配不捕获</span></span><br><span class="line"><span class="comment">// 19.(?=) 正向预查</span></span><br><span class="line"><span class="comment">// 20.(?!) 负向预查</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 3.普通元字符 ： 代表本身含义的 */</span></span><br><span class="line"><span class="comment">//  /zhnegze/  此正则匹配的就是 &#x27;zhengze&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>修饰符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 正则表达式常用的修饰符：i m g */</span></span><br><span class="line"><span class="comment">//  1.   i    ignoreCase (一个闹尅死)   忽略单词大小写匹配</span></span><br><span class="line"><span class="comment">//  2.   m    multiline（莫体力）    忽略换行匹配   能够多行匹配</span></span><br><span class="line"><span class="comment">//  3.   g    global (阁楼布偶)    全局匹配</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// /A/.test(&#x27;lalala&#x27;);  ===&gt;false</span></span><br><span class="line"><span class="comment">// /A/i.test(&#x27;lalala&#x27;);  ===&gt;true</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="元字符详细解析"><a href="#元字符详细解析" class="headerlink" title="元字符详细解析"></a><strong>元字符详细解析</strong></h4><ul>
+<li><p><code>^ 开头 $ 结尾</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^\d/</span> ;  <span class="comment">//任意数字开头</span></span><br><span class="line">reg.test(<span class="string">&#x27;hahaha&#x27;</span>);   <span class="comment">//===&gt;false</span></span><br><span class="line">reg.test(<span class="string">&#x27;lalala123&#x27;</span>);   <span class="comment">//===&gt;false</span></span><br><span class="line">reg.test(<span class="string">&#x27;20191101hah&#x27;</span>); <span class="comment">//===&gt;true</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/\d$/</span> ;    <span class="comment">//任意数字结尾</span></span><br><span class="line">reg.test(<span class="string">&#x27;hahaha&#x27;</span>);   <span class="comment">//===&gt;false</span></span><br><span class="line">reg.test(<span class="string">&#x27;lalala123&#x27;</span>);   <span class="comment">//===&gt;true</span></span><br><span class="line">reg.test(<span class="string">&#x27;20191101hah&#x27;</span>); <span class="comment">//===&gt;false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//两个都不加 : 字符串中包含符合规则的就可以</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/\d+/</span> ;  <span class="comment">//包含数字就可以</span></span><br><span class="line">reg.test(<span class="string">&#x27;hahaha&#x27;</span>);   <span class="comment">//===&gt;false</span></span><br><span class="line">reg.test(<span class="string">&#x27;lalala123&#x27;</span>);   <span class="comment">//===&gt;true</span></span><br><span class="line">reg.test(<span class="string">&#x27;20191101hah&#x27;</span>); <span class="comment">//===&gt;true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//两个都加 : 字符串只能和规则一致</span></span><br><span class="line"><span class="keyword">let</span> reg1 = <span class="regexp">/^\d+$/</span>; <span class="comment">//之能是以数字开头  数字结尾 的数字</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//验证手机号码</span></span><br><span class="line"><span class="keyword">let</span> reg2 = <span class="regexp">/^1\d&#123;10&#125;$/</span>;<span class="comment">//只能以1开头 以数字结尾  中间是0~9之间的数   出现10次</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><code>\</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//把特殊符号转换为  普通  符号</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p><code>x|y</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> reg1 = <span class="regexp">/^18|19$/</span>;</span><br><span class="line">reg.test(<span class="string">&#x27;18&#x27;</span>);  <span class="comment">//===&gt;true</span></span><br><span class="line">reg.test(<span class="string">&#x27;19&#x27;</span>);	 <span class="comment">//===&gt;true</span></span><br><span class="line">reg.test(<span class="string">&#x27;189&#x27;</span>); <span class="comment">//===&gt;true</span></span><br><span class="line">reg.test(<span class="string">&#x27;119&#x27;</span>); <span class="comment">//===&gt;true</span></span><br><span class="line">reg.test(<span class="string">&#x27;81&#x27;</span>); <span class="comment">//===&gt;false</span></span><br><span class="line">reg.test(<span class="string">&#x27;819&#x27;</span>); <span class="comment">//===&gt;true</span></span><br><span class="line"><span class="comment">//-------------直接使用会存在很乱的优先级问题  一般写的时候一般都伴随着（）  因为小括号会改变处理的优先级  --&gt; 小括号： 分组</span></span><br><span class="line"><span class="keyword">let</span> reg1 = <span class="regexp">/^18|19$/</span>;</span><br><span class="line">reg.test(<span class="string">&#x27;18&#x27;</span>);  <span class="comment">//===&gt;true</span></span><br><span class="line">reg.test(<span class="string">&#x27;19&#x27;</span>);	 <span class="comment">//===&gt;true</span></span><br><span class="line">reg.test(<span class="string">&#x27;189&#x27;</span>); <span class="comment">//===&gt;false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>[]</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.中括号中出现的字符一般都代表本身的含义</span></span><br><span class="line"><span class="comment">//2.中括号中不存在多位数</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="http://www.blog.image.qcwy.org.cn/old/RegExp/1572613219396.png" alt="1572613219396"></p>
+</li>
+</ul>
+<h4 id="常用的正则表达式"><a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a><strong>常用的正则表达式</strong></h4><blockquote>
+<ol>
+<li><p>常用的有效数字</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">有效数字: <span class="number">0</span>   <span class="number">1</span>  <span class="number">12</span>   <span class="number">0.2</span>  -<span class="number">1</span>   -<span class="number">12.3</span></span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 * 规则分析</span></span><br><span class="line"><span class="comment">		 * 		1.可能出现 -  + 号</span></span><br><span class="line"><span class="comment">		 *		2.一位0~9都可以，多位首位不能是0</span></span><br><span class="line"><span class="comment">		 *		3.小数部分可有可无，有的话必须有小数点和数字</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^[+-]?(\d|([1-9]\d+))(\.\d+)?$/</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>验证密码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 字母、数字、下划线</span></span><br><span class="line"><span class="comment">// 长度 ： 6~16位</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^\w&#123;6,16&#125;$/</span>;  </span><br><span class="line">reg.test(val)<span class="comment">//返回true代表符合规则    false不符合规则</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>验证真实姓名</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> *  1.汉字 /^[\u4E00-\u9FA5]$/</span></span><br><span class="line"><span class="comment"> *	2.名字长度 2~10</span></span><br><span class="line"><span class="comment"> *	3.可能有译名 XX·XXX  &#x27;尼古·哈哈&#x27;</span></span><br><span class="line"><span class="comment"> *	4.可能有少数民族名字 2~10</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^[\u4E00-\u9FA5]&#123;2,10&#125;(·[\u4E00-\u9FA5]&#123;2,10&#125;)&#123;0,2&#125;$/</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>验证邮箱</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 1.@符号前 \w+((-\w+)|(\.\w+))*</span></span><br><span class="line"><span class="comment"> *		1.1.以数字  字母  下划线 开头  1到多位</span></span><br><span class="line"><span class="comment"> *		1.2.还可以是 - 数字 字母 下划线 或者 .数字 字母 下划线 整体出现 0 到 多次</span></span><br><span class="line"><span class="comment"> *			邮箱名：由 数字 字母 下划线 . - 组成  切必须以 数字 开头  -/. 不能连续出现</span></span><br><span class="line"><span class="comment"> * 2.[A-Za-z0-9]+   @xxx.com</span></span><br><span class="line"><span class="comment"> *		2.1.@后紧跟着 数字 字母 1到多位</span></span><br><span class="line"><span class="comment"> * 3.((\.|-)[A-Za-z0-9]+)*   xxx@xxx.[com].cn  匹配com 对@后面名字的补充</span></span><br><span class="line"><span class="comment"> *		3.1.</span></span><br><span class="line"><span class="comment"> * 4.\.[A-Za-z0-9]+    .cn   .com ...</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^\w+((-\w+)|(\.\w+))*@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>身份证号码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 1.一共18位</span></span><br><span class="line"><span class="comment"> * 2.最后一位可能是X   X代表的是10</span></span><br><span class="line"><span class="comment"> *   身份证前六位意义： 省 市 县</span></span><br><span class="line"><span class="comment"> *   中间八位意义：   年 月 日</span></span><br><span class="line"><span class="comment"> *   最后四位意义： 	最后一位 X或者数字  </span></span><br><span class="line"><span class="comment"> *					倒数第二位： 偶数是  女  基数是  男</span></span><br><span class="line"><span class="comment"> *					其余位数是经过算法算出来的</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">//let reg = /^\d&#123;17&#125;(\d|X)$/;不用</span></span><br><span class="line"><span class="comment">//小括号作用   ： 1. 分组捕获   不仅可以把大正则匹配的信息捕获到，还可以单独捕获到每个小分组的内容   2.改变优先级</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^(\d&#123;6&#125;)(\d&#123;4&#125;)(\d&#123;2&#125;)(\d&#123;2&#125;)(\d&#123;2&#125;)(\d)(\d|X)$/</span>;</span><br><span class="line">reg.exec(<span class="string">&#x27;4114121198902034432&#x27;</span>)  <span class="comment">//捕获结果是一个数组</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+</blockquote>
+<pre><code>#### **正则表达式捕获的懒惰性**</code></pre>
+<blockquote>
+<p>实现正则捕获的方法       懒惰性的解决办法</p>
+<ul>
+<li><p>正则RegExp.prototype上的方法</p>
+<ul>
+<li><p>exec</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> *  基于exec实现正则的捕获</span></span><br><span class="line"><span class="comment"> *		1. 捕获到的结果是null / 一个数组    第一项捕获到的是内容   其余项  对应小分组本次单独捕获到的内容    index项 当前捕获到的 在原字符串的起始索引   input项   原始字符串</span></span><br><span class="line"><span class="comment"> *		2.每执行一次 exec只能捕获到一个符合正则规则的   默认情况下 即使多次捕获 捕获的结果永远是第一个    即=&gt;正则的懒惰性    默认只捕获一个</span></span><br><span class="line"><span class="comment"> *		    </span></span><br><span class="line"><span class="comment"> *	lastIndex代表当前正则下一次匹配的起始索引位置 console.log(reg.lastIndex);  ===0   </span></span><br><span class="line"><span class="comment"> *	正则懒惰性的原因就是因为lastIndex默认情况下是不会被修改/改变的   每次都是从起始位置开始查找    lastIndex不能手动修改不行   只能使用全局修饰符  g  /\d+/g  匹配后lastIndex值会自动改变		</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//需求：编写一个方法execAll()，执行一次可以把所有匹配的结果捕获到（前提：正则一定要设置全局修饰符  g）</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">execAll</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line">        <span class="comment">// str ： 是要匹配的字符串</span></span><br><span class="line">        <span class="comment">// this ：RegExp的实例（当前操作的正则）</span></span><br><span class="line">        <span class="comment">// 首先验证传进来的正则是否设置了全局修饰符 g 如果没有 则不进行捕获 </span></span><br><span class="line">        <span class="keyword">if</span>(!<span class="built_in">this</span>.global) <span class="keyword">return</span> <span class="built_in">this</span>.exec(str);</span><br><span class="line">        <span class="comment">// arr : 存储最后所有捕获的信息</span></span><br><span class="line">        <span class="comment">// res ：存储每次捕获的内容 </span></span><br><span class="line">        <span class="keyword">let</span> arr = [];</span><br><span class="line">        <span class="keyword">let</span> res = <span class="built_in">this</span>.exec(str);</span><br><span class="line">        <span class="function"><span class="title">while</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">            <span class="comment">//把每次捕获的数组的第一项内容放到数组arr中</span></span><br><span class="line">            arr.push(res[<span class="number">0</span>]);</span><br><span class="line">            <span class="comment">//只要捕获的内容部位null 则继续捕获</span></span><br><span class="line">            res = <span class="built_in">this</span>.exec(str);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> arr === <span class="number">0</span> ？ <span class="literal">null</span> : arr;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">RegExp</span>.prototype.execAll=execAll;</span><br><span class="line">&#125;();</span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/\d+/g</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.execAll(str));</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>test</p>
+</li>
+<li><p>字符串String.prototype上支持正则表达式处理的方法</p>
+<ul>
+<li><p>replace</p>
+</li>
+<li><p>match</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 字符串.match(正则);    返回所有匹配的数   以数组的形式返回   即  返回 所有符合正则的 项 的数组  如果一项都没有匹配  则返回null</span></span><br><span class="line"><span class="comment">// match 可以在执行一次的情况下  捕获到所有匹配的数据  ( 前提 ：正则需要加全局修饰符 g )</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 上面那些代码 就是 match 实现原理</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>splite</p>
+</li>
+<li><p>……</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//实现正则匹配的前提是：当前正则要和字符串匹配   如果不匹配   （exec）捕获的是null</span></span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<h4 id="正则的分组捕获"><a href="#正则的分组捕获" class="headerlink" title="正则的分组捕获"></a>正则的分组捕获</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * ?: =&gt;只匹配不捕获    如果设置了分组   又不想捕获到  就需要加 `？:` 来处理</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">let</span> reg=<span class="regexp">/^(\d&#123;6&#125;)(\d&#123;4&#125;)(\d&#123;2&#125;)(\d&#123;2&#125;)\d&#123;2&#125;(\d)(？:\d|X)$/</span>;</span><br><span class="line"><span class="keyword">let</span> str=<span class="string">&#x27;411411199801224422&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.match(reg)); </span><br><span class="line"><span class="comment">//返回发结果 ：[&quot;411411199801224422&quot;, &quot;411411&quot;, &quot;1998&quot;, &quot;01&quot;, &quot;22&quot;, &quot;2&quot;,  index: 0, input: &quot;411411199801224422&quot;, groups: undefined]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> * ===&gt; 获取自己想要的数据</span></span><br><span class="line"><span class="comment"> * 多次匹配时   只能捕获到大正则匹配到的数据   小分组的信息拿不到</span></span><br><span class="line"><span class="comment"> * 解决方案</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;&#123;1993&#125;年&#123;03&#125;月&#123;23&#125;日&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/\&#123;(\d+)\&#125;/g</span>;</span><br><span class="line"><span class="keyword">let</span> aryBig = [];</span><br><span class="line"><span class="keyword">let</span> arySmall = [];</span><br><span class="line"><span class="keyword">let</span> res=reg.exec(str);</span><br><span class="line"><span class="function"><span class="title">while</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> [big,small] = res;</span><br><span class="line">    aryBig.push(big);</span><br><span class="line">    arySmall.push(small);</span><br><span class="line">    res=res.exec(str);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(aryBig,arySmall);</span><br><span class="line"><span class="comment">// 执行结果为 ：aryBig==&gt;[&#x27;&#123;1993&#125;&#x27;,&#x27;&#123;03&#125;&#x27;,&#x27;&#123;23&#125;&#x27;]    arySmall==&gt;[&#x27;1993&#x27;,&#x27;03&#x27;,&#x27;23&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>分组的第三个作用  :  分组引用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 分组的第三个作用  :  分组引用</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;book&#x27;</span>;  <span class="comment">//&#x27;good&#x27;  &#x27;look&#x27;   &#x27;moon&#x27;   &#x27;foot&#x27; ......</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^[a-zA-Z]([a-zA-Z])\1[a-zA-Z]$/</span>; <span class="comment">//分组引用 ： 就是通过 &#x27;\数字&#x27; 让其代表和对应分组出现一模一样的内容</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">&#x27;book&#x27;</span>));<span class="comment">//==&gt;true</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">&#x27;deep&#x27;</span>));<span class="comment">//==&gt;true</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">&#x27;some&#x27;</span>));<span class="comment">//==&gt;false</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h4 id="正则捕获的贪婪性"><a href="#正则捕获的贪婪性" class="headerlink" title="正则捕获的贪婪性"></a>正则捕获的贪婪性</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * =&gt;正则捕获的贪婪性 ：默认情况下  正则捕获的时候 是按照当前正则所匹配的最长结果来获取的</span></span><br><span class="line"><span class="comment"> *   </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;啦啦啦2019&amp;&amp;加油2020&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/\d+/g</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.match(reg));<span class="comment">//===&gt;[&quot;2019&quot;, &quot;2020&quot;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//----解决办法 ： ==&gt;在量词元字符后面加上一个 `？` 表示取消正则的贪婪性(按照正则匹配的最短结果来获取)----</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;啦啦啦2019&amp;&amp;加油2020&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/\d+?/g</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.match(reg));<span class="comment">//[&quot;2&quot;, &quot;0&quot;, &quot;1&quot;, &quot;9&quot;, &quot;2&quot;, &quot;0&quot;, &quot;2&quot;, &quot;0&quot;]</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>？在正则中的   五大作用</p>
+<blockquote>
+<ol>
+<li>?左边是非量词元字符 ：本身代表量词元字符  出现0到1次</li>
+<li>?左边是量词 元字符 ： 取消捕获时候的贪婪性</li>
+<li>(?:) : 值匹配不捕获</li>
+<li>(?=) : 正向预查</li>
+<li>(?!) : 负向预查</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h4 id="其他正则捕获的方法"><a href="#其他正则捕获的方法" class="headerlink" title="其他正则捕获的方法"></a>其他正则捕获的方法</h4><ol>
+<li><p>test也能捕获 (本意是匹配)     <strong>一般不用   了解就好</strong>  </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;&#123;2019&#125;年&#123;11&#125;月&#123;2日&#125;&#x27;</span>；</span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/\&#123;(\d+)\&#125;/g</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(str));<span class="comment">//==&gt;true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">RegExp</span>.$1);<span class="comment">//==&gt;2019</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(str));<span class="comment">//==&gt;true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">RegExp</span>.$1);<span class="comment">//==&gt;11</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(str));<span class="comment">//==&gt;true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">RegExp</span>.$1);<span class="comment">//==&gt;2</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(str));<span class="comment">//==&gt;false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">RegExp</span>.$1);<span class="comment">//==&gt;&#x27;2&#x27; 存储的是上次捕获的结果</span></span><br><span class="line"><span class="comment">//RegExp.$1~$9 : 获取当前本次正则匹配后   第一个到第九个分组的信息</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>replace  字符串中实现替换的方法   (一般都是伴随正则一起使用的) <strong>重点</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;jiege@2019|jiege@2020&#x27;</span>;</span><br><span class="line"><span class="comment">// ==&gt;把 &#x27;jiege&#x27; 转换为 &#x27;杰哥&#x27;</span></span><br><span class="line"><span class="comment">// 1. 不使用正则   执行一次只能替换一个</span></span><br><span class="line">str=str.replace(<span class="string">&#x27;jiege&#x27;</span>,<span class="string">&#x27;杰哥&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//==&gt;&#x27;杰哥@2019|jiege@2020&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2. 使用正则   一次就可以完成所有匹配</span></span><br><span class="line">str=str.replace(<span class="regexp">/jiege/g</span>,<span class="string">&#x27;杰哥&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//==&gt;&#x27;杰哥@2019|杰哥@2020&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 必须使用正则   不然不好弄</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//不使用正则   每次替换从头开始   类似于正则的懒惰性</span></span><br><span class="line">str=str.replace(<span class="string">&#x27;jiege&#x27;</span>,<span class="string">&#x27;jiegehaobang&#x27;</span>).replace(<span class="string">&#x27;jiege&#x27;</span>,<span class="string">&#x27;jiegehaobang&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//==&gt;&#x27;jiegehaobanghaobang@2019|jiege@2020&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//使用正则</span></span><br><span class="line">str=str.replace(<span class="regexp">/jiege/g</span>,<span class="string">&#x27;jiegehaobang&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//==&gt;&#x27;jiegehaobang@2019|jiegehaobang@2020&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>案例1：把时间字符串进行处理</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> time = <span class="string">&#x27;2019-11-02&#x27;</span>;</span><br><span class="line"><span class="comment">//变为 ==&gt; 2019年11月02日</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^(\d&#123;4&#125;)-(\d&#123;1,2&#125;)-(\d&#123;1,2&#125;)$/</span>;</span><br><span class="line">time = time.replace(reg,<span class="string">&#x27;$1年$2月$3日&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(time)<span class="comment">//==&gt;&quot;2019年11月02日&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p> replace 实现原理   [str].replace([reg],[function])</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> time = <span class="string">&#x27;2019-11-02&#x27;</span>;</span><br><span class="line"><span class="comment">//变为 ==&gt; 2019年11月02日</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^(\d&#123;4&#125;)-(\d&#123;1,2&#125;)-(\d&#123;1,2&#125;)$/</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实现原理   [str].replace([reg],[function])</span></span><br><span class="line"><span class="comment">// 1.replace 首先拿reg和time进行匹配捕获，能匹配到几次就会把传递的函数执行几次  （而且是 匹配一次就执行一次）</span></span><br><span class="line"><span class="comment">// 2.不仅把方法执行了，而且replace还给方法传递了实参信息(是 exec捕获 的内容一致的信息：大正则匹配的信息  小分组匹配的系信息......)</span></span><br><span class="line"><span class="comment">// 3.在函数中  返回的是什么，就把当前大正则匹配的内容替换成什么</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*time = time.replace(reg,(big,$1,$2,$3)=&gt;&#123;</span></span><br><span class="line"><span class="comment">    //$1,$2,$3是自己设置的变量</span></span><br><span class="line"><span class="comment">    console.log(big,$1,$2,$3);//==&gt;2019-11-02 2019 11 02</span></span><br><span class="line"><span class="comment">&#125;)*/</span></span><br><span class="line"></span><br><span class="line">time = time.replace(reg,<span class="function">(<span class="params">...arg</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> [,$<span class="number">1</span>,$<span class="number">2</span>,$<span class="number">3</span>]=arg;</span><br><span class="line">    $<span class="number">2.</span>length &lt; <span class="number">2</span> ? $<span class="number">2</span> = <span class="string">`0<span class="subst">$&#123;$<span class="number">2</span>&#125;</span>`</span> : <span class="literal">null</span>;</span><br><span class="line">    $<span class="number">3.</span>length &lt; <span class="number">2</span> ? $<span class="number">3</span> = <span class="string">`0<span class="subst">$&#123;$<span class="number">3</span>&#125;</span>`</span> : <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;$<span class="number">1</span>&#125;</span>年<span class="subst">$&#123;$<span class="number">2</span>&#125;</span>月<span class="subst">$&#123;$<span class="number">3</span>&#125;</span>日`</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(time);<span class="comment">//==&gt;&#x27;2019年11月02日&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>案例2：单词首字母大写</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;good good study,day day up!&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/\b([a-zA-Z])[a-zA-Z]*\b/g</span>;</span><br><span class="line"><span class="comment">//=&gt;函数执行了6次，每一次都把正则匹配到的信息传递给函数</span></span><br><span class="line"><span class="comment">//=&gt;每一次arg存的都是一个数组：[&#x27;good&#x27;,&#x27;g&#x27;]......</span></span><br><span class="line">str = str.replace(reg,<span class="function">(<span class="params">...arg</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> [content,$<span class="number">1</span>]=arg;</span><br><span class="line">    $<span class="number">1</span> = $<span class="number">1.</span>toUpperCase();</span><br><span class="line">    content = content.substring(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> $<span class="number">1</span>+content;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(str);</span><br></pre></td></tr></table></figure>
+
+<p>案例3：验证一个字符串中那个字母出现的次数最多，多少次？</p>
+<p>​    做法1：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*======去重思维=====*/</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;2019nianshayemeiganchneg&#x27;</span>;</span><br><span class="line"><span class="comment">//创建一个对象用来存放字符串的每一个不同的项</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line"><span class="comment">//将字符串中的每一项都放在对象中</span></span><br><span class="line">[].forEach.call(str,<span class="function"><span class="params">char</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="comment">//判断对象中有没有这个字符，有就把值加一   没有就赋值为一</span></span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params"><span class="keyword">typeof</span> obj[char]!==<span class="string">&#x27;undefined&#x27;</span></span>)</span>&#123;</span><br><span class="line">        obj[char]++;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    obj[char]=<span class="number">1</span>;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">let</span> max = <span class="number">1</span>;</span><br><span class="line"><span class="comment">//储存次数最多的字符的数组</span></span><br><span class="line"><span class="keyword">let</span> res = [];</span><br><span class="line"><span class="comment">//判断出现次数最多的字符出现的次数</span></span><br><span class="line"><span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> key <span class="keyword">in</span> obj</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> item = obj[key];</span><br><span class="line">    item &gt; max ? max = item : <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//判断出现次数最多的字符</span></span><br><span class="line"><span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> key <span class="keyword">in</span> obj</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> item = obj[key];</span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">item === max</span>)</span>&#123;</span><br><span class="line">        res.push(key);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(res,max) <span class="comment">//[&quot;n&quot;] 4</span></span><br></pre></td></tr></table></figure>
+
+<p>​    做法2：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*======排序=====*/</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;2019nianshayemeiganchnega&#x27;</span>;</span><br><span class="line"></span><br><span class="line">str=str.split(<span class="string">&#x27;&#x27;</span>).sort(<span class="function">(<span class="params">a,b</span>)=&gt;</span>a.localeCompare(b)).join(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(str)<span class="comment">//0129aaaceeegghhiimnnnnsy</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/([a-zA-Z0-9])\1+/g</span>;</span><br><span class="line"><span class="keyword">let</span> ary = str.match(reg);</span><br><span class="line"><span class="built_in">console</span>.log(str.match(reg));<span class="comment">//[&quot;aaaa&quot;, &quot;eee&quot;, &quot;gg&quot;, &quot;hh&quot;, &quot;ii&quot;, &quot;nnnn&quot;]</span></span><br><span class="line">ary.sort(<span class="function">(<span class="params">a,b</span>)=&gt;</span>b.length - a.length);<span class="comment">//sort()数组排序</span></span><br><span class="line"><span class="built_in">console</span>.log(ary.sort(<span class="function">(<span class="params">a,b</span>)=&gt;</span>b.length - a.length));<span class="comment">//[&quot;aaaa&quot;, &quot;nnnn&quot;, &quot;eee&quot;, &quot;gg&quot;, &quot;hh&quot;, &quot;ii&quot;]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`出现最多的是<span class="subst">$&#123;ary[<span class="number">0</span>].slice(<span class="number">0</span>,<span class="number">1</span>)&#125;</span>,出现了<span class="subst">$&#123;ary[<span class="number">0</span>].length&#125;</span>`</span>);<span class="comment">//出现最多的是n,出现了4</span></span><br><span class="line"><span class="keyword">let</span> max = ary[<span class="number">0</span>].length;</span><br><span class="line"><span class="keyword">let</span> res = [ary[<span class="number">0</span>].substr(<span class="number">0</span>,<span class="number">1</span>)];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; ary.length; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> item = ary[i];</span><br><span class="line">    <span class="keyword">if</span> (item.length&lt;max) &#123;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    res.push(item.slice(<span class="number">0</span>,<span class="number">1</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(max,res);</span><br></pre></td></tr></table></figure>
+
+<p>​    做法3：**代码最少   推荐 **</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*======从最大到最小去找--正则匹配=====*/</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;2019nianshayemeiganchnega&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//把字符串变成数</span></span><br><span class="line">str = str.split(<span class="string">&#x27;&#x27;</span>).sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a.localeCompare(b)).join(<span class="string">&#x27;&#x27;</span>); <span class="comment">//字母的比较不能用加减  只能用a.localeCompare(b)</span></span><br><span class="line"><span class="comment">//接收最大值</span></span><br><span class="line"><span class="keyword">let</span> max = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> res = [];</span><br><span class="line"><span class="keyword">let</span> flag = <span class="literal">false</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str); <span class="comment">//0129aaaaceeegghhiimnnnnsy</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = str.length; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">    <span class="keyword">let</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">&#x27;([a-zA-Z])\\1&#123;&#x27;</span> + (i - <span class="number">1</span>) + <span class="string">&#x27;&#125;&#x27;</span>, <span class="string">&#x27;g&#x27;</span>);</span><br><span class="line">    str.replace(reg, <span class="function">(<span class="params">content, $<span class="number">1</span></span>) =&gt;</span> &#123;</span><br><span class="line">        res.push($<span class="number">1</span>);</span><br><span class="line">        max = i;</span><br><span class="line">        flag = <span class="literal">true</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`出现次数最多的字符为<span class="subst">$&#123;res&#125;</span>,出现了<span class="subst">$&#123;max&#125;</span>次`</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​    做法4：查找字母删减去重法</p>
+<p>案例4：正则表达式  之  时间字符串格式化</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">~ <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * formatTime:时间字符串的格式化处理方法</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>templete  期望获取的日期格式模板</span></span><br><span class="line"><span class="comment">     *      模板规则：&#123;0&#125; -&gt;&#123;0~5&#125;-&gt;年月日时分秒</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns <span class="type">&#123;String&#125;</span> </span>格式化后的时间字符串</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">formatTime</span>(<span class="params">templete = <span class="string">&#x27;&#123;0&#125;年&#123;1&#125;月&#123;2&#125;日  &#123;3&#125;时&#123;4&#125;分&#123;5&#125;秒&#x27;</span></span>) </span>&#123;</span><br><span class="line">        <span class="comment">//先获取时间字符串中的年月日时分秒等信息</span></span><br><span class="line">        <span class="keyword">let</span> timeAry = <span class="built_in">this</span>.match(<span class="regexp">/\d+/g</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(timeAry); <span class="comment">//[&quot;2019&quot;, &quot;8&quot;, &quot;13&quot;, &quot;16&quot;, &quot;51&quot;, &quot;3&quot;]</span></span><br><span class="line">        <span class="keyword">return</span> templete = templete.replace(<span class="regexp">/\&#123;(\d+)\&#125;/g</span>, <span class="function">(<span class="params">content, $<span class="number">1</span></span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="comment">//content : 代表当前本次大正则匹配的信息   $1代表小粉猪单独匹配的信息</span></span><br><span class="line">            <span class="comment">//以$1的值为索引，到timeary中找到对应的时间(如果没有  用&#x27;00&#x27;代替)</span></span><br><span class="line">            <span class="keyword">let</span> time = timeAry[$<span class="number">1</span>] || <span class="string">&#x27;00&#x27;</span>;</span><br><span class="line">            time.length &lt; <span class="number">2</span> ? time = <span class="string">`0<span class="subst">$&#123;time&#125;</span>`</span> : <span class="literal">null</span>;</span><br><span class="line">            <span class="keyword">return</span> time;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 扩展到内置类String.prototype上 */</span></span><br><span class="line">    [<span class="string">&#x27;formatTime&#x27;</span>].forEach(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">String</span>.prototype[item] = <span class="built_in">eval</span>(item);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;();</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> time = <span class="string">&#x27;2019-8-13 16:51:3&#x27;</span>;</span><br><span class="line"><span class="comment">// 服务器获取的时间数据 ：2019-8-13 16:51:3    2019/8/13 16:51:3</span></span><br><span class="line"><span class="comment">// 想要转变的格式 ：&#x27;08月13日 16时51分&#x27;    &#x27;2019年08月13日&#x27; ......</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果想要[time.formatTime()]这样调用，则方法必须在字符串的原型上</span></span><br><span class="line">time.formatTime();</span><br><span class="line">time.formatTime(<span class="string">&#x27;&#123;0&#125;年&#123;1&#125;月&#123;2&#125;日&#x27;</span>); <span class="comment">//&quot;2019年08月13日&quot;</span></span><br><span class="line">time.formatTime(<span class="string">&#x27;&#123;0&#125;/&#123;1&#125;/&#123;2&#125;&#x27;</span>);<span class="comment">//&quot;2019/08/13&quot;</span></span><br><span class="line">time.formatTime(<span class="string">&#x27;&#123;0&#125;-&#123;1&#125;-&#123;2&#125;  &#123;3&#125;:&#123;4&#125;:&#123;5&#125;&#x27;</span>);<span class="comment">//&quot;2019-08-13  16:51:03&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    案例4：正则表达式之qureyURLParams</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">~ <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * qureyURLParams:获取url地址问号后面的参数系信息（可能包含hash值）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span></span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     *      [object]把所有问号参数信息以键值对的方式存储起来并返回</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">qureyURLParams</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">        <span class="built_in">this</span>.replace(<span class="regexp">/([^=#&amp;?]+)=([^=#&amp;?]+)/g</span>, <span class="function">(<span class="params">...[, $<span class="number">1</span>, $<span class="number">2</span>]</span>) =&gt;</span> obj[$<span class="number">1</span>] = $<span class="number">2</span>);</span><br><span class="line">        <span class="built_in">this</span>.replace(<span class="regexp">/#([^=#&amp;?]+)/g</span>, <span class="function">(<span class="params">...[, $<span class="number">1</span>]</span>) =&gt;</span> obj[<span class="string">&#x27;HASH&#x27;</span>] = $<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 扩展到内置类String.prototype上 */</span></span><br><span class="line">    [<span class="string">&#x27;qureyURLParams&#x27;</span>].forEach(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">String</span>.prototype[item] = <span class="built_in">eval</span>(item);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;();</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> url = <span class="string">&#x27;https://www.baidu.com/s?wd=dnf&amp;rsv_spt=1&#x27;</span>;</span><br><span class="line">url.qureyURLParams();</span><br></pre></td></tr></table></figure>
+
+<p>​    案例4：正则表达式之千分符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">~ <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * millimeter:实现大数字的千分符处理</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span></span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     *      [String] 千分符后的字符串</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">millimeter</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.replace(<span class="regexp">/\d&#123;1,3&#125;(?=(\d&#123;3&#125;)+$)/g</span>, <span class="function"><span class="params">content</span> =&gt;</span>content + <span class="string">&#x27;,&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 扩展到内置类String.prototype上 */</span></span><br><span class="line">    [<span class="string">&#x27;millimeter&#x27;</span>].forEach(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">String</span>.prototype[item] = <span class="built_in">eval</span>(item);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;();</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> num = <span class="string">&#x27;123445112&#x27;</span>; <span class="comment">//=&gt;&#x27;112,212,323,123&#x27;</span></span><br><span class="line">num.millimeter();</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<p>注意：部分文章可能会在不就的将来更新</p>
+<p>如果能够帮助到你，是小编最大的荣幸</p>
+<p>当然   有 不好的地方  请大家帮忙指出   学习永无止境    </p>
+<p>小编一直认为  人外有人  天外有天    一起学习   共同进步</p>
+<p>让我们共同加油吧！！！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:1329712473@qq.com">Yunjie Ge</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://www.cq.qcwy.org.cn/2018/02/15/js/RegExp/">http://www.cq.qcwy.org.cn/2018/02/15/js/RegExp/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">转载请留言,未经许可禁止转载,转载时请注明出处(必须保留作者署名及链接)</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/js/">js</a></div><div class="post_share"><div class="social-share" data-image="http://www.blog.image.qcwy.org.cn/anime/24.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpeg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpeg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpeg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpeg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2018/02/15/html/divCenter/"><img class="prev-cover" src="http://www.blog.image.qcwy.org.cn/anime/9.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">盒子的垂直水平居中的几种方式</div></div></a></div><div class="next-post pull-right"><a href="/2018/02/15/docsify/docsify/"><img class="next-cover" src="http://www.blog.image.qcwy.org.cn/anime/10.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">docsify的基本使用</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/11/23/js/change-url/" title="更改URL但不跳转页面"><img class="cover" src="http://www.blog.image.qcwy.org.cn/bg/tangyan/582bfe8db2398.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-23</div><div class="title">更改URL但不跳转页面</div></div></a></div><div><a href="/2017/09/12/js/closure-js/" title="Js的闭包详解"><img class="cover" src="http://www.blog.image.qcwy.org.cn/anime/4.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-09-12</div><div class="title">Js的闭包详解</div></div></a></div><div><a href="/2020/08/12/js/input-fixed/" title="safair下input获取焦点时fixed失效"><img class="cover" src="http://www.blog.image.qcwy.org.cn/article/js/input/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-12</div><div class="title">safair下input获取焦点时fixed失效</div></div></a></div><div><a href="/2020/08/12/js/ios-android-time/" title="ios移动端，js时间操作getTime(),getFullYear()等返回显示NaN的解决"><img class="cover" src="http://www.blog.image.qcwy.org.cn/article/js/input/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-12</div><div class="title">ios移动端，js时间操作getTime(),getFullYear()等返回显示NaN的解决</div></div></a></div><div><a href="/2020/09/09/js/js-cookie/" title="js-cookie"><img class="cover" src="http://www.blog.image.qcwy.org.cn/bg/fengjing/lengjingjpeg.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-09</div><div class="title">js-cookie</div></div></a></div><div><a href="/2018/03/21/js/js-set-html-font-size/" title="js获取html到fontSize大小"><img class="cover" src="http://www.blog.image.qcwy.org.cn/anime/14.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2018-03-21</div><div class="title">js获取html到fontSize大小</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Gitalk</span><span class="switch-btn"></span><span class="second-comment">Valine</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Yunjie Ge</div><div class="author-info__description">你相信什么，你就看到什么</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">69</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">36</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">75</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/pythongyj"><i class="fab fa-github"></i><span>github</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">图片来源网络，如有侵权，个人主页联系方式联系我，必将在最短的时间内删除</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86"><span class="toc-number">2.</span> <span class="toc-text">正则表达式 (基础部分)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">2.1.</span> <span class="toc-text">编写正则表达式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E5%AD%97%E7%AC%A6%E8%AF%A6%E7%BB%86%E8%A7%A3%E6%9E%90"><span class="toc-number">2.2.</span> <span class="toc-text">元字符详细解析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">2.3.</span> <span class="toc-text">常用的正则表达式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E7%9A%84%E5%88%86%E7%BB%84%E6%8D%95%E8%8E%B7"><span class="toc-number">2.4.</span> <span class="toc-text">正则的分组捕获</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E6%8D%95%E8%8E%B7%E7%9A%84%E8%B4%AA%E5%A9%AA%E6%80%A7"><span class="toc-number">2.5.</span> <span class="toc-text">正则捕获的贪婪性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%AD%A3%E5%88%99%E6%8D%95%E8%8E%B7%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">2.6.</span> <span class="toc-text">其他正则捕获的方法</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/07/05/build/gulp/" title="使用gulp从0到1构建项目"><img src="http://www.oss.qcwy.org.cn/mxt/2.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用gulp从0到1构建项目"/></a><div class="content"><a class="title" href="/2021/07/05/build/gulp/" title="使用gulp从0到1构建项目">使用gulp从0到1构建项目</a><time datetime="2021-07-05T13:33:07.000Z" title="发表于 2021-07-05 21:33:07">2021-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/13/vue/cq-vui/" title="写一个自己的UI组件库"><img src="http://www.blog.image.qcwy.org.cn/anime/29.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="写一个自己的UI组件库"/></a><div class="content"><a class="title" href="/2021/04/13/vue/cq-vui/" title="写一个自己的UI组件库">写一个自己的UI组件库</a><time datetime="2021-04-13T12:15:11.000Z" title="发表于 2021-04-13 20:15:11">2021-04-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/10/other/picture-bed/" title="mac图床配置"><img src="http://www.oss.qcwy.org.cn/b/picture-bed/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mac图床配置"/></a><div class="content"><a class="title" href="/2021/04/10/other/picture-bed/" title="mac图床配置">mac图床配置</a><time datetime="2021-04-10T10:54:07.000Z" title="发表于 2021-04-10 18:54:07">2021-04-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/18/life/life-2021-218/" title="生活杂谈"><img src="http://www.blog.image.qcwy.org.cn/bg/tangyan/dcf123c4615b865c794e2596b39a6f58.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生活杂谈"/></a><div class="content"><a class="title" href="/2021/02/18/life/life-2021-218/" title="生活杂谈">生活杂谈</a><time datetime="2021-02-18T10:24:12.000Z" title="发表于 2021-02-18 18:24:12">2021-02-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/11/target/2021-target/" title="2020总结与2021目标"><img src="http://www.blog.image.qcwy.org.cn/article/target/2021/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2020总结与2021目标"/></a><div class="content"><a class="title" href="/2021/02/11/target/2021-target/" title="2020总结与2021目标">2020总结与2021目标</a><time datetime="2021-02-11T11:06:25.000Z" title="发表于 2021-02-11 19:06:25">2021-02-11</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(http://www.blog.image.qcwy.org.cn/anime/24.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2021 By Yunjie Ge</div><div class="footer_custom_text"><span>浙ICP备19013115号-2 宁可辛苦一阵子，不要辛苦一辈子</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    $.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js', function () {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      true && mermaid.init()
+    })
+  }
+}</script><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk({
+      clientID: 'abd6a19b087541550bd4',
+      clientSecret: 'eaaa72d3c11594b39acb1fbffe043e981a12c8d8',
+      repo: 'gitalk',
+      owner: 'pythongyj',
+      admin: ['pythongyj'],
+      id: 'c4c08f32f5d93a916bda70c0dd5b4515',
+      language: 'zh-CN',
+      perPage: 10,
+      distractionFreeMode: false,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      updateCountCallback: commentCount
+    })
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    $.getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js', initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: 'sz3D4qARp0IMmUHg272iA2tH-gzGzoHsz',
+      appKey: 'TiwdbT2Fn3y2AJyg23g9myjG',
+      placeholder: '说出你想说的',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'en',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Gitalk' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script></div></body></html>

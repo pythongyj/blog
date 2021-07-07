@@ -1,0 +1,459 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>长情 - 梦幻人生</title><meta name="keywords" content="html,css,js,node,vue,react,dart,flutter"><meta name="author" content="Yunjie Ge,1329712473@qq.com"><meta name="copyright" content="Yunjie Ge"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="你相信什么，你就看到什么">
+<meta property="og:type" content="website">
+<meta property="og:title" content="长情">
+<meta property="og:url" content="http://www.cq.qcwy.org.cn/page/2/index.html">
+<meta property="og:site_name" content="长情">
+<meta property="og:description" content="你相信什么，你就看到什么">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg">
+<meta property="article:author" content="Yunjie Ge">
+<meta property="article:tag" content="html,css,js,node,vue,react,dart,flutter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg"><link rel="shortcut icon" href="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg"><link rel="canonical" href="http://www.cq.qcwy.org.cn/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/image/pwa/apple-touch-icon.png"/><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Yunjie Ge","link":"链接: ","source":"来源: 长情","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: {"text":"I,LOVE,YOU","fontSize":"15px"},
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-07-07 11:06:21'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><style type="text/css">#toggle-sidebar {bottom: 80px}#toggle-sidebar {left:100px}</style><meta name="generator" content="Hexo 5.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">69</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">36</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">75</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 音视频</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 优秀资源</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://www.css.case.qcwy.org.cn/"><span> CSS Demo</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#"><span> ES6</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.ui.qcwy.org.cn/"><span> UI设计</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.big.school.qcwy.org.cn/"><span> Big School</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(http://www.blog.image.qcwy.org.cn/bg/tangyan/222.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">长情</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 音视频</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 优秀资源</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://www.css.case.qcwy.org.cn/"><span> CSS Demo</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#"><span> ES6</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.ui.qcwy.org.cn/"><span> UI设计</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.big.school.qcwy.org.cn/"><span> Big School</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">长情</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/12/14/nginx/proxy/" title="反向代理解决跨域">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/article/nginx/nginx-proxy/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="反向代理解决跨域"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/14/nginx/proxy/" title="反向代理解决跨域">反向代理解决跨域</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-14T09:30:07.000Z" title="发表于 2020-12-14 17:30:07">2020-12-14</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-14T09:30:07.000Z" title="更新于 2020-12-14 17:30:07">2020-12-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/nginx/">nginx</a></span></div><div class="content">前言
+话说悲催的一天从跨域开始！不知道没有前端工程化的时候，业界是怎么处理跨域的！同源策略？jsonp？还是做代理呢？
+可以说本人百分之95以上的时间都是在写工程化的项目！众所周知，工程化项目里可以配置代理解决跨域，我也写过两篇关于配置代理的文章！但是jq如何做代理，还真没有做过！
+你可能会说，让后端写下请求头，允许跨域不就好了么！我只想说，我也想，但是沟通不来啊！
+没办法！那就自己创造办法吧！
+
+什么事跨域
+出于浏览器的同源策略限制。同源策略（Sameoriginpolicy）是一种约定，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，则浏览器的正常功能可能都会受到影响。可以说Web是构建在同源策略基础之上的，浏览器只是针对同源策略的一种实现。同源策略会阻止一个域的javascript脚本和另外一个域的内容进行交互。所谓同源（即指在同一个域）就是两个页面具有相同的协议（protocol），主机（host）和端口号（port）
+
+MacOS安装nginx
+查询要安装的软件是否存在
+
+1brew search nginx
+
+
+
+查看要安装的软件的详细信息以及安装在什么目录中
+
+1 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/12/10/js/es6/array/" title="数组常用方法总结">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/article/js/es6/array/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数组常用方法总结"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/10/js/es6/array/" title="数组常用方法总结">数组常用方法总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-10T05:54:07.000Z" title="发表于 2020-12-10 13:54:07">2020-12-10</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-11T04:32:24.000Z" title="更新于 2020-12-11 12:32:24">2020-12-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/js/">js</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/js/es6/">es6</a></span></div><div class="content">前言最近被初入前端的的朋友问到，工作中经常用到的东西都有什么，刚好也为了今后要转行到前端来的亲弟弟能够更好的翻阅学习，写下此片文章。本文个人感觉并没有什么写的价值（只是个人感觉），所有的方法和简介均来自MDN官方文档。只是多附加一些案例而已以及使用场景和个人使用心得
+本文包含的数组的方法
+from()
+isArray()
+concat()
+entries()
+fill()
+filter()
+find()
+forEach()
+includes()
+indexOf()
+join()
+keys()
+values()
+map()
+pop()
+push()
+reduce()
+shift()
+unshift()
+slice()
+some()
+sort()
+splice()
+toString()
+length
+flot()
+
+具体的使用方法、使用场景、使用心得1、from()
+定义 :
+
+
+Array.from() 方法从一个类似数组或可迭代对象创建一个新的，浅拷贝的数组实例。` 方法从一个类似数组或可迭代对象创建一个新的，浅拷贝的数组实例。
+
+
+语法：
+
+
+如需观看，请参考官网文档from() M ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/12/04/flutter/l10n/" title="flutter 使用 intl 配置国际化">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/article/flutter/l10n/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="flutter 使用 intl 配置国际化"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/04/flutter/l10n/" title="flutter 使用 intl 配置国际化">flutter 使用 intl 配置国际化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-04T11:32:23.000Z" title="发表于 2020-12-04 19:32:23">2020-12-04</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-04T11:32:23.000Z" title="更新于 2020-12-04 19:32:23">2020-12-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/flutter/">flutter</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/flutter/%E5%9B%BD%E9%99%85%E5%8C%96/">国际化</a></span></div><div class="content">前言
+不造你有没有发现—&gt;写程序，学语言，学框架，怎么又绕不过这个国际化，毕竟现在叫地球村嘛。不过flutter现在的国际话不叫i8n了，叫l10n，至于为什么，暂时也没有求关注这个问题。
+
+学习配置中文官网
+先安装插件 Flutter Intl
+vscode安装
+
+
+Android studio安装
+
+
+
+项目配置123456dependencies:  flutter:    sdk: flutter  + flutter_localizations:  	+ sdk: flutter
+
+
+生成国际化文件
+vscode生成国际化文件
+
+查看—&gt;命令面板—&gt; Flutter Intl: Initialize
+
+之后会在lib目录下生成如下目录和文件（文件只有英文的）
+
+
+
+
+-pubspec.yaml文件最下方会出现，这个是控制是否自动生成和动态修改国际化文件的
+
+12flutter_intl:  enabled: true
+
+
+添加国际化文件——&gt; lib/l10n/intl_xxx.arb
+
+
+Android studio 生成国际化文件
+
+Tools-& ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/12/04/flutter/drawer/" title="flutter 自定义Drawer的宽度">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/article/flutter/drawer/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="flutter 自定义Drawer的宽度"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/04/flutter/drawer/" title="flutter 自定义Drawer的宽度">flutter 自定义Drawer的宽度</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-04T04:44:36.000Z" title="发表于 2020-12-04 12:44:36">2020-12-04</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-04T04:44:37.000Z" title="更新于 2020-12-04 12:44:37">2020-12-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/flutter/">flutter</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/flutter/Drawer/">Drawer</a></span></div><div class="content">前言
+在学习flutter的时候碰到了Drawer这个Widget，但是在使用的过程中有这么一个需求，我想修改他的宽度，网上搜了一圈没找到对应的api。自己也是经过一番折腾才解决的，可能是因为我还是flutter小白把！不管怎样，记录一下，下次遇到问题，好解决。
+
+解决过程这里上个图就好了，代码就先不上了，毕竟下面会有最终代码。
+初始效果
+源码
+
+可以看到的是_kWidth字段是私有的，是没有办法被外部访问或修改的，然而，宽度的大小控制就是跟这个字段息息相关的，如下图
+
+
+
+_width这个才是真正的宽度（真正的宽度的大小是根据这个变量计算出来的），但是可以发现这个也是私有的，不能被外部访问和篡改。那么，该怎样处理呢？不要怕，重写这个类不就可以了么！重写这个类，把需要的加进去就可以实现了。
+
+重写CustomDrawer类123456789101112131415161718192021222324252627282930313233343536&#x2F;&#x2F; 为了简单，里面一切处理没写，可以参照官方的，或者把官方的拷贝过来，在官方的基础上进行修改，都是可以的class Cu ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/12/02/flutter/apk/" title="flutter 打包apk">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/article/flutter/apk/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="flutter 打包apk"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/02/flutter/apk/" title="flutter 打包apk">flutter 打包apk</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-02T04:14:28.000Z" title="发表于 2020-12-02 12:14:28">2020-12-02</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-02T04:14:28.000Z" title="更新于 2020-12-02 12:14:28">2020-12-02</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/flutter/">flutter</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/flutter/%E9%83%A8%E7%BD%B2/">部署</a></span></div><div class="content">前言
+最近公司开会说要搞一套 app 出来，所以嘛！没办法，干呗！学习 flutter。本篇文章记录 flutter 打包成 apk 的方法和步骤。虽说没什么东西，但是记录一下也是好的，毕竟好记性不如烂笔头嘛！话不多说，赶紧肝起来。
+
+流程使用官网给的命令生成 key.jks 文件12keytool -genkey -v -keystore ~/key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key
+
+
+注意:
+
+保持文件私密; 不要将它加入到公共源代码控制中。
+此操作生成的签名是*.jks 格式
+
+
+创建一个 key.properties 文件创建一个名为/android/key.properties 的文件，其中包含对密钥库的引用
+
+storePassword=&lt;创建 keystore 时的 storePassword&gt;,如：123456keyPassword=123456&lt;创建 keystore 时的 keyPassword&gt;,如：123456keyAlias=keystoreFile=.. ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/11/30/vscode/bg/" title="VS Code 设置背景图片">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/article/vscode/bg/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VS Code 设置背景图片"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/30/vscode/bg/" title="VS Code 设置背景图片">VS Code 设置背景图片</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-30T07:15:11.000Z" title="发表于 2020-11-30 15:15:11">2020-11-30</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-30T07:15:11.000Z" title="更新于 2020-11-30 15:15:11">2020-11-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/vscode/">vscode</a></span></div><div class="content">说明
+本来是没想着写这篇博客的，但是有一个要好的朋友问到了！因为在异地，我这个人又懒，又刚好有时间，就想着写这么一个教程给他！也防止以后再有人问到这个（万一有以后有朋友问呢）！
+由于本人是mac电脑，只能使用mac电脑进行演示！windows电脑与之类似，下面简单说一下如何配置，没有图片
+
+下面的方式的第三步，找到文件
+修改文件，第五步
+重启vscode查看效果，第六步
+
+
+修改方式
+本人知道的修改方式分为两种
+
+
+方式一
+
+使用插件background,在vscode中下载这个插件，然后按照说明配置就行了！但是个人不推荐使用这个，至于原因，百度一下，你就知道！
+
+
+方式二
+
+修改vscode的文件（操作需谨慎）。比较推荐的方式！下面就以这种方式进行讲解说明！
+
+
+
+设置过程
+找到vscode
+找到vscode，右键&gt; 选项&gt; 在访达中显示
+
+
+点击vscode，显示包内容
+
+
+
+
+点击Contents&gt;Resources&gt;app&gt;out&gt;vs&gt;workbench后显示的就是下面图片的内容，第一次打开里面是没有图片的
+注意：这里面的文件是只读的 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/11/26/ui/ps/delete-text/" title="去除图片文字水印">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/article/ui/ps/delete-text/w.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="去除图片文字水印"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/26/ui/ps/delete-text/" title="去除图片文字水印">去除图片文字水印</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-26T04:20:26.000Z" title="发表于 2020-11-26 12:20:26">2020-11-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-26T04:20:26.000Z" title="更新于 2020-11-26 12:20:26">2020-11-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/ui/">ui</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/ui/ps/">ps</a></span></div><div class="content">在网络上下载的图片具有水印
+有时候在网络上下载的图片具有水印，会影响到整体的美观，就想把图片的文字水印去掉。本文记录的是自己使用 ps 去除水印的方法！由于刚开始也是不会，经过网络上查找学习才会，所以记录一下，防止遗忘。
+
+
+为了不浪费不必要的时间，这里有些图片说明就省略了，毕竟不是什么难的东西，按照流程做就可以了。没有什么思想和原理什么乱七八糟的东西！
+
+去除过程
+在菜单栏执行文件-&gt;打开命令，导入图片素材，按下Command+J 复制新建图层(对原文件进行保护)
+在工具栏选中矩形选框工具，使用矩形选框工具将文字水印部分框选
+在菜单栏执行 选择-&gt;色彩范围命令
+出现色彩范围窗口，选择第一个吸管工具，吸取文字上的颜色，调节颜色容差，在下方预览的位置看到文字完整，且背景比较黑的情况下，如果效果不好，可以选择第二个吸管工具，将没有吸到的位置吸取，完成后，点击 确定，这样就转中文字水印了
+为了确保文字水印完全选中还需要扩展一下选取范围，在菜单栏执行 选择-&gt;修改-&gt;扩展命令，弹出扩展选区窗口，扩展值根据实际情况来调整，点击 确定
+在菜单栏执行编辑-&gt;内容识别填充 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/11/23/js/change-url/" title="更改URL但不跳转页面">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/bg/tangyan/582bfe8db2398.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="更改URL但不跳转页面"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/23/js/change-url/" title="更改URL但不跳转页面">更改URL但不跳转页面</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-23T06:23:11.000Z" title="发表于 2020-11-23 14:23:11">2020-11-23</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-23T06:23:11.000Z" title="更新于 2020-11-23 14:23:11">2020-11-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/js/">js</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/js/url/">url</a></span></div><div class="content">需求
+今天提出了一个需求，就是在使用第三方支付的时候，如果用户在支付页面直接点击浏览器的返回页面，会直接返回到下单的页面，但此时订单已经下过了，再次返回到下订单的页面，展示之前的内容显然是不合理的，现在的需求就是，用户在第三方支付的时候，点击浏览器的返回按钮时，返回到当前下的订单的订单详情页面。
+
+寻找解决方法
+你可能会说，单击返回的时候跳转到订单详情页面不就行了么！那么不好意思，你怎么知道或者说这么做是没办法跳转过去的，因为从支付页面返回没有传回来任何的参数，程序根本就什么都不知道，由于是公司的项目，这里就不贴图了（程序员操守）。
+
+
+经过思考，研究，想到如果在页面跳转到支付页面之前，先往页面的历史记录里添加一条订单详情的历史记录是不是可以解决问题。
+
+解决问题经过插文档和mdn发现，如果想要往历史记录里加入一条记录，但是页面不发生变化。需要使用history.replaceState(null,””,``);
+最终解决
+123456history.replaceState(   null,   &quot;&quot;,   `http://192.168.1.11:8080/tw ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/11/15/flutter/basis_one/" title="flutter 基础学习第一天">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/anime/17.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="flutter 基础学习第一天"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/15/flutter/basis_one/" title="flutter 基础学习第一天">flutter 基础学习第一天</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-15T15:14:28.000Z" title="发表于 2020-11-15 23:14:28">2020-11-15</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-15T15:54:07.000Z" title="更新于 2020-11-15 23:54:07">2020-11-15</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/flutter/">flutter</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/flutter/%E5%9F%BA%E7%A1%80/">基础</a></span></div><div class="content">flutter基础之Text123456789101112131415161718192021222324252627import &#x27;package:flutter/material.dart&#x27;;  void main()=&gt;runApp(MyApp()); class MyApp extends StatelessWidget &#123;  @override   Widget build(BuildContext context) &#123;     return MaterialApp(       title: &quot;flutter入门学习&quot;,       home: Scaffold(         body: Center(           child: Text(             &quot;今天开始学习flutter的text组件，我相信总有一天我会成为flutter真正的开发者，加油！打工人&quot;,             textAlign: TextAlign.center,             ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/11/02/html/emmet/" title="Emmet 语法 速查表">     <img class="post_bg" src="http://www.blog.image.qcwy.org.cn/bg/fengjing/tt.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Emmet 语法 速查表"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/02/html/emmet/" title="Emmet 语法 速查表">Emmet 语法 速查表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-02T07:51:41.000Z" title="发表于 2020-11-02 15:51:41">2020-11-02</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-02T07:51:41.000Z" title="更新于 2020-11-02 15:51:41">2020-11-02</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Emmet/">Emmet</a></span></div><div class="content">1、前言 Emmet是一款文本编辑器/IDE的插件，用来快速生成复杂的HTML代码，只要掌握一些常用的语法（类似于CSS选择器），可以减少重复编码的工作。再配合上乱数假文（lorem）能够帮助我们快速开发网页。
+2、语法使用2.1、 调用方法
+Emmet使用Tab作为自动生成HTML代码的触发器。当然也可以按回车键来触发（本人喜欢使用VsCode）
+
+2.2、后代标签生成
+Child: &gt;
+
+1234&lt;!-- ul&gt;li --&gt; &lt;ul&gt;   &lt;li&gt;&lt;/li&gt; &lt;/ul&gt;
+
+2.3、兄弟标签生成
+Sibling:+
+
+1234 &lt;!-- span+span+span --&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
+
+2.4、上级元素标签生成
+Climb-up: ^
+
+123&lt;!-- p&gt;span+em^span --&gt;&lt;p&gt;&lt;span&gt;&lt;/spa ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="http://www.blog.image.qcwy.org.cn/atavar/atavar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Yunjie Ge</div><div class="author-info__description">你相信什么，你就看到什么</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">69</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">36</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">75</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/pythongyj"><i class="fab fa-github"></i><span>github</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">图片来源网络，如有侵权，个人主页联系方式联系我，必将在最短的时间内删除</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/07/05/build/gulp/" title="使用gulp从0到1构建项目"><img src="http://www.oss.qcwy.org.cn/mxt/2.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用gulp从0到1构建项目"/></a><div class="content"><a class="title" href="/2021/07/05/build/gulp/" title="使用gulp从0到1构建项目">使用gulp从0到1构建项目</a><time datetime="2021-07-05T13:33:07.000Z" title="发表于 2021-07-05 21:33:07">2021-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/13/vue/cq-vui/" title="写一个自己的UI组件库"><img src="http://www.blog.image.qcwy.org.cn/anime/29.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="写一个自己的UI组件库"/></a><div class="content"><a class="title" href="/2021/04/13/vue/cq-vui/" title="写一个自己的UI组件库">写一个自己的UI组件库</a><time datetime="2021-04-13T12:15:11.000Z" title="发表于 2021-04-13 20:15:11">2021-04-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/10/other/picture-bed/" title="mac图床配置"><img src="http://www.oss.qcwy.org.cn/b/picture-bed/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mac图床配置"/></a><div class="content"><a class="title" href="/2021/04/10/other/picture-bed/" title="mac图床配置">mac图床配置</a><time datetime="2021-04-10T10:54:07.000Z" title="发表于 2021-04-10 18:54:07">2021-04-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/18/life/life-2021-218/" title="生活杂谈"><img src="http://www.blog.image.qcwy.org.cn/bg/tangyan/dcf123c4615b865c794e2596b39a6f58.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生活杂谈"/></a><div class="content"><a class="title" href="/2021/02/18/life/life-2021-218/" title="生活杂谈">生活杂谈</a><time datetime="2021-02-18T10:24:12.000Z" title="发表于 2021-02-18 18:24:12">2021-02-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/11/target/2021-target/" title="2020总结与2021目标"><img src="http://www.blog.image.qcwy.org.cn/article/target/2021/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2020总结与2021目标"/></a><div class="content"><a class="title" href="/2021/02/11/target/2021-target/" title="2020总结与2021目标">2020总结与2021目标</a><time datetime="2021-02-11T11:06:25.000Z" title="发表于 2021-02-11 19:06:25">2021-02-11</time></div></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="card-content"><div class="item-headline"><i class="fas fa-bolt"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Emmet/"><span class="card-category-list-name">Emmet</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/common/"><span class="card-category-list-name">common</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/cookie/"><span class="card-category-list-name">cookie</span><span class="card-category-list-count">1</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/cookie/%E8%AE%BE%E7%BD%AEcookie/"><span class="card-category-list-name">设置cookie</span><span class="card-category-list-count">1</span></a></li></ul><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/"><span class="card-category-list-name">css</span><span class="card-category-list-count">9</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/fixed/"><span class="card-category-list-name">fixed</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/"><span class="card-category-list-name">三大特性</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/%E4%B8%8D%E5%B8%B8%E8%A7%81%E4%BD%86%E6%98%AF%E5%AE%9E%E7%94%A8css%E5%B1%9E%E6%80%A7/"><span class="card-category-list-name">不常见但是实用css属性</span><span class="card-category-list-count">1</span></a></li></ul>
+            <li class="card-category-list-item more is-center"><a class="card-category-list-link-more" href="/categories/">
+                <span>查看更多</span><i class="fas fa-angle-right"></i></a></li>
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/gulp/" style="font-size: 1.1em; color: rgb(180, 153, 32)">gulp</a><a href="/tags/css/" style="font-size: 1.43em; color: rgb(119, 77, 45)">css</a><a href="/tags/cookie/" style="font-size: 1.1em; color: rgb(120, 14, 42)">cookie</a><a href="/tags/docsify/" style="font-size: 1.1em; color: rgb(23, 144, 88)">docsify</a><a href="/tags/flutter/" style="font-size: 1.37em; color: rgb(160, 169, 53)">flutter</a><a href="/tags/hexo/" style="font-size: 1.17em; color: rgb(114, 46, 46)">hexo</a><a href="/tags/html/" style="font-size: 1.23em; color: rgb(10, 33, 152)">html</a><a href="/tags/Emmet/" style="font-size: 1.1em; color: rgb(83, 105, 122)">Emmet</a><a href="/tags/iconfont/" style="font-size: 1.1em; color: rgb(7, 10, 27)">iconfont</a><a href="/tags/vue/" style="font-size: 1.43em; color: rgb(91, 35, 39)">vue</a><a href="/tags/common-js/" style="font-size: 1.1em; color: rgb(17, 62, 174)">common.js</a><a href="/tags/cmd/" style="font-size: 1.1em; color: rgb(10, 46, 78)">cmd</a><a href="/tags/amd/" style="font-size: 1.1em; color: rgb(15, 164, 76)">amd</a><a href="/tags/js/" style="font-size: 1.5em; color: rgb(42, 160, 171)">js</a><a href="/tags/less/" style="font-size: 1.1em; color: rgb(146, 70, 70)">less</a><a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 1.17em; color: rgb(107, 184, 86)">生活</a><a href="/tags/npm/" style="font-size: 1.1em; color: rgb(30, 134, 184)">npm</a><a href="/tags/nuxt/" style="font-size: 1.23em; color: rgb(55, 118, 52)">nuxt</a><a href="/tags/i18n/" style="font-size: 1.17em; color: rgb(131, 111, 65)">i18n</a><a href="/tags/proxy/" style="font-size: 1.17em; color: rgb(10, 159, 9)">proxy</a><a href="/tags/%E5%85%B6%E4%BB%96/" style="font-size: 1.1em; color: rgb(145, 114, 89)">其他</a><a href="/tags/%E8%A7%84%E8%8C%83/" style="font-size: 1.1em; color: rgb(151, 126, 27)">规范</a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.1em; color: rgb(20, 70, 62)">图床</a><a href="/tags/%E7%9B%AE%E6%A0%87/" style="font-size: 1.1em; color: rgb(21, 147, 52)">目标</a><a href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" style="font-size: 1.1em; color: rgb(166, 195, 67)">高等数学</a><a href="/tags/shell/" style="font-size: 1.1em; color: rgb(80, 149, 8)">shell</a><a href="/tags/target/" style="font-size: 1.1em; color: rgb(150, 89, 65)">target</a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 1.3em; color: rgb(43, 47, 71)">数据结构与算法</a><a href="/tags/vscode/" style="font-size: 1.1em; color: rgb(46, 161, 117)">vscode</a><a href="/tags/vant/" style="font-size: 1.23em; color: rgb(129, 196, 32)">vant</a><a href="/tags/%E5%9F%BA%E7%A1%80-%E4%B8%80/" style="font-size: 1.1em; color: rgb(4, 122, 149)">基础 一</a><a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 1.1em; color: rgb(111, 72, 110)">小程序</a><a href="/tags/yarn/" style="font-size: 1.1em; color: rgb(76, 198, 100)">yarn</a><a href="/tags/react/" style="font-size: 1.1em; color: rgb(108, 180, 85)">react</a><a href="/tags/nginx/" style="font-size: 1.1em; color: rgb(194, 94, 74)">nginx</a><a href="/tags/ui/" style="font-size: 1.17em; color: rgb(139, 163, 188)">ui</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">八月 2020</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item more is-center"><a class="card-archive-list-link-more" href="/archives/">
+              <span>查看更多</span><i class="fas fa-angle-right"  ></i></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">69</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2017-06-06T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">58k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-07-07T03:06:21.060Z"></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(http://www.blog.image.qcwy.org.cn/bg/tangyan/222.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2021 By Yunjie Ge</div><div class="footer_custom_text"><span>浙ICP备19013115号-2 宁可辛苦一阵子，不要辛苦一辈子</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "你相信什么，你就看到什么".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: false,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '你'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+} else {
+  subtitleType()
+}</script><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    $.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js', function () {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      true && mermaid.init()
+    })
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script></div></body></html>
